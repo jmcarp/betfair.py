@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import os
 import re
 import sys
 from setuptools import setup, find_packages
@@ -11,6 +12,11 @@ TEST_REQUIRES = [
     'pytest',
     'responses',
 ]
+
+
+if sys.argv[-1] == 'publish':
+    os.system('python setup.py sdist upload')
+    sys.exit()
 
 
 class PyTest(TestCommand):
