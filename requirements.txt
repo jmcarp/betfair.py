@@ -1,0 +1,7 @@
+six
+enum34
+invoke
+requests
+decorator
+inflection
+python-dateutil
