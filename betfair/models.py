@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import six
+
 from . import constants
 
 from .meta.datatype import DataType
@@ -10,11 +12,11 @@ from .model import BetfairModel
 
 
 class Event(BetfairModel):
-    id = Field(DataType(str))
-    name = Field(DataType(str))
-    country_code = Field(DataType(str))
-    timezone = Field(DataType(str))
-    venue = Field(DataType(str))
+    id = Field(DataType(six.text_type))
+    name = Field(DataType(six.text_type))
+    country_code = Field(DataType(six.text_type))
+    timezone = Field(DataType(six.text_type))
+    venue = Field(DataType(six.text_type))
     open_date = Field(datetime_type)
 
 
@@ -26,37 +28,37 @@ class MarketDescription(BetfairModel):
     settle_time = Field(datetime_type)
     betting_type = Field(EnumType(constants.MarketBettingType), required=True)
     turn_in_play_enabled = Field(DataType(bool), required=True)
-    market_type = Field(DataType(str), required=True)
-    regulator = Field(DataType(str), required=True)
+    market_type = Field(DataType(six.text_type), required=True)
+    regulator = Field(DataType(six.text_type), required=True)
     market_base_rate = Field(DataType(float), required=True)
     discount_allowed = Field(DataType(bool), required=True)
-    wallet = Field(DataType(str))
-    rules = Field(DataType(str))
+    wallet = Field(DataType(six.text_type))
+    rules = Field(DataType(six.text_type))
     rules_has_date = Field(DataType(bool))
-    clarifications = Field(DataType(str))
+    clarifications = Field(DataType(six.text_type))
 
 
 class RunnerCatalog(BetfairModel):
-    selection_id = Field(DataType(str), required=True)
-    runner_name = Field(DataType(str), required=True)
+    selection_id = Field(DataType(six.text_type), required=True)
+    runner_name = Field(DataType(six.text_type), required=True)
     handicap = Field(DataType(float), required=True)
     sort_priority = Field(DataType(int), required=True)
     metadata = Field(DataType(dict))
 
 
 class EventType(BetfairModel):
-    id = Field(DataType(str))
-    name = Field(DataType(str))
+    id = Field(DataType(six.text_type))
+    name = Field(DataType(six.text_type))
 
 
 class Competition(BetfairModel):
-    id = Field(DataType(str))
-    name = Field(DataType(str))
+    id = Field(DataType(six.text_type))
+    name = Field(DataType(six.text_type))
 
 
 class MarketCatalogue(BetfairModel):
-    market_id = Field(DataType(str))
-    market_name = Field(DataType(str))
+    market_id = Field(DataType(six.text_type))
+    market_name = Field(DataType(six.text_type))
     market_start_time = Field(datetime_type)
     description = Field(EnumType(MarketDescription))
     total_matched = Field(DataType(float))
@@ -72,19 +74,19 @@ class TimeRange(BetfairModel):
 
 
 class MarketFilter(BetfairModel):
-    text_query = Field(DataType(str))
-    exchange_ids = ListField(DataType(str))
-    event_type_ids = ListField(DataType(str))
-    event_ids = ListField(DataType(str))
-    competition_ids = ListField(DataType(str))
-    market_ids = ListField(DataType(str))
-    venues = ListField(DataType(str))
+    text_query = Field(DataType(six.text_type))
+    exchange_ids = ListField(DataType(six.text_type))
+    event_type_ids = ListField(DataType(six.text_type))
+    event_ids = ListField(DataType(six.text_type))
+    competition_ids = ListField(DataType(six.text_type))
+    market_ids = ListField(DataType(six.text_type))
+    venues = ListField(DataType(six.text_type))
     bsp_only = Field(DataType(bool))
     turn_in_play_enabled = Field(DataType(bool))
     in_play_only = Field(DataType(bool))
     market_betting_types = ListField(EnumType(constants.MarketBettingType))
-    market_countries = ListField(DataType(str))
-    market_type_codes = ListField(DataType(str))
+    market_countries = ListField(DataType(six.text_type))
+    market_type_codes = ListField(DataType(six.text_type))
     market_start_time = Field(ModelType(TimeRange))
     with_orders = ListField(EnumType(constants.OrderStatus))
 
@@ -109,7 +111,7 @@ class ExchangePrices(BetfairModel):
 
 
 class Order(BetfairModel):
-    bet_id = Field(DataType(str), required=True)
+    bet_id = Field(DataType(six.text_type), required=True)
     order_type = Field(EnumType(constants.OrderType), required=True)
     status = Field(EnumType(constants.OrderStatus), required=True)
     persistence_type = Field(EnumType(constants.PersistenceType), required=True)
@@ -127,8 +129,8 @@ class Order(BetfairModel):
 
 
 class Match(BetfairModel):
-    bet_id = Field(DataType(str))
-    match_id = Field(DataType(str))
+    bet_id = Field(DataType(six.text_type))
+    match_id = Field(DataType(six.text_type))
     side = Field(EnumType(constants.Side), required=True)
     price = Field(DataType(float), required=True)
     size = Field(DataType(float), required=True)
@@ -150,7 +152,7 @@ class Runner(BetfairModel):
 
 
 class MarketBook(BetfairModel):
-    market_id = Field(DataType(str), required=True)
+    market_id = Field(DataType(six.text_type), required=True)
     is_market_data_delayed = Field(DataType(bool), required=True)
     status = Field(EnumType(constants.MarketStatus))
     bet_delay = Field(DataType(int))
@@ -176,7 +178,7 @@ class RunnerProfitAndLoss(BetfairModel):
 
 
 class MarketProfitAndLoss(BetfairModel):
-    market_id = Field(DataType(str))
+    market_id = Field(DataType(six.text_type))
     commission_applied = Field(DataType(float))
     profit_and_losses = ListField(ModelType(RunnerProfitAndLoss))
 
@@ -217,11 +219,11 @@ class CompetitionResult(BetfairModel):
 
     competition = Field(ModelType(Competition))
     market_count = Field(DataType(int))
-    competition_region = Field(DataType(str))
+    competition_region = Field(DataType(six.text_type))
 
 
 class CountryCodeResult(BetfairModel):
-    country_code = Field(DataType(str))
+    country_code = Field(DataType(six.text_type))
     market_count = Field(DataType(int))
 
 
@@ -238,7 +240,7 @@ class EventTypeResult(BetfairModel):
 
 
 class MarketTypeResult(BetfairModel):
-    market_type = Field(DataType(str))
+    market_type = Field(DataType(six.text_type))
     market_count = Field(DataType(int))
 
 
@@ -249,7 +251,7 @@ class TimeRangeResult(BetfairModel):
 
 
 class VenueResult(BetfairModel):
-    venue = Field(DataType(str))
+    venue = Field(DataType(six.text_type))
     market_count = Field(DataType(int))
 
 
@@ -266,25 +268,25 @@ class PlaceInstruction(BetfairModel):
 
 
 class CancelInstruction(BetfairModel):
-    bet_id = Field(DataType(str), required=True)
+    bet_id = Field(DataType(six.text_type), required=True)
     size_reduction = Field(DataType(float))
 
 
 class ReplaceInstruction(BetfairModel):
-    bet_id = Field(DataType(str), required=True)
+    bet_id = Field(DataType(six.text_type), required=True)
     new_price = Field(DataType(float), required=True)
 
 
 class UpdateInstruction(BetfairModel):
-    bet_id = Field(DataType(str), required=True)
+    bet_id = Field(DataType(six.text_type), required=True)
     new_persistence_type = Field(EnumType(constants.PersistenceType), required=True)
 
 
 # Summary reports
 
 class CurrentOrderSummary(BetfairModel):
-    bet_id = Field(DataType(str), required=True)
-    market_id = Field(DataType(str), required=True)
+    bet_id = Field(DataType(six.text_type), required=True)
+    market_id = Field(DataType(six.text_type), required=True)
     selection_id = Field(DataType(float), required=True)
     handicap = Field(DataType(float), required=True)
     price_size = Field(DataType(PriceSize), required=True)
@@ -301,8 +303,8 @@ class CurrentOrderSummary(BetfairModel):
     size_lapsed = Field(DataType(float))
     size_cancelled = Field(DataType(float))
     size_voided = Field(DataType(float))
-    regulator_auth_code = Field(DataType(str))
-    regulator_code = Field(DataType(str))
+    regulator_auth_code = Field(DataType(six.text_type))
+    regulator_code = Field(DataType(six.text_type))
 
 
 class CurrentOrderSummaryReport(BetfairModel):
@@ -311,21 +313,21 @@ class CurrentOrderSummaryReport(BetfairModel):
 
 
 class ItemDescription(BetfairModel):
-    event_type_desc = Field(DataType(str))
-    event_desc = Field(DataType(str))
-    market_desc = Field(DataType(str))
+    event_type_desc = Field(DataType(six.text_type))
+    event_desc = Field(DataType(six.text_type))
+    market_desc = Field(DataType(six.text_type))
     market_start_Time = Field(datetime_type)
-    runner_desc = Field(DataType(str))
+    runner_desc = Field(DataType(six.text_type))
     number_of_winners = Field(DataType(int))
 
 
 class ClearedOrderSummary(BetfairModel):
-    event_type_id = Field(DataType(str))
-    event_id = Field(DataType(str))
-    market_id = Field(DataType(str))
-    selection_id = Field(DataType(str))
+    event_type_id = Field(DataType(six.text_type))
+    event_id = Field(DataType(six.text_type))
+    market_id = Field(DataType(six.text_type))
+    selection_id = Field(DataType(six.text_type))
     handicap = Field(DataType(float))
-    bet_id = Field(DataType(str))
+    bet_id = Field(DataType(six.text_type))
     placed_data = Field(datetime_type)
     persistence_type = Field(EnumType(constants.PersistenceType))
     order_type = Field(EnumType(constants.OrderType))
@@ -356,7 +358,7 @@ class BaseInstructionReport(BetfairModel):
 
 class PlaceInstructionReport(BaseInstructionReport):
     instruction = Field(ModelType(PlaceInstruction), required=True)
-    bet_id = Field(DataType(str))
+    bet_id = Field(DataType(six.text_type))
     placed_date = Field(datetime_type)
     average_price_matched = Field(DataType(float))
     size_matched = Field(DataType(float))
@@ -380,10 +382,10 @@ class UpdateInstructionReport(BaseInstructionReport):
 # Execution reports
 
 class BaseExecutionReport(BetfairModel):
-    customer_ref = Field(DataType(str))
+    customer_ref = Field(DataType(six.text_type))
     status = Field(EnumType(constants.ExecutionReportStatus), required=True)
     error_code = Field(EnumType(constants.ExecutionReportErrorCode))
-    market_id = Field(DataType(str))
+    market_id = Field(DataType(six.text_type))
 
 
 class PlaceExecutionReport(BaseExecutionReport):

@@ -68,7 +68,7 @@ List all tennis markets ::
         MarketFilter(text_query='tennis')
     )
     print(len(event_types))                 # 1
-    print(event_types[0].event_type.name    # 'Tennis'
+    print(event_types[0].event_type.name)   # 'Tennis'
     tennis_event_type = event_types[0]
     markets = client.list_market_catalogue(
         MarketFilter(event_type_ids=[tennis_event_type.event_type.id])

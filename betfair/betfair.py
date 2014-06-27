@@ -48,7 +48,6 @@ class Betfair(object):
         )
         utils.check_status_code(response)
         data = response.json()
-        print('data', data)
         if data.get('status') != 'SUCCESS':
             raise exceptions.BetfairAuthError(response, data)
 

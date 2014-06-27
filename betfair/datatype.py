@@ -34,4 +34,9 @@ class ModelType(DataType):
         return self.type(**value)
 
 
-datetime_type = DataType(datetime.datetime, preprocessor=parse_date)
+def preprocess_date(date):
+    if isinstance(date, datetime.datetime):
+        return date
+    return parse_date(date)
+
+datetime_type = DataType(datetime.datetime, preprocessor=preprocess_date)

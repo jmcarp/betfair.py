@@ -15,4 +15,6 @@ class DataType(object):
 
     def unserialize(self, value):
         processed = self.preprocess(value)
+        if isinstance(processed, self.type):
+            return processed
         return self.type(processed)
