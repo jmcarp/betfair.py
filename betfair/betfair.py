@@ -112,7 +112,7 @@ class Betfair(object):
     # Bet query methods
 
     @utils.requires_login
-    def list_event_types(self, filter, locale):
+    def list_event_types(self, filter, locale=None):
         """
 
         :param MarketFilter filter:
@@ -126,7 +126,7 @@ class Betfair(object):
         )
 
     @utils.requires_login
-    def list_competitions(self, filter, locale):
+    def list_competitions(self, filter, locale=None):
         """
 
         :param MarketFilter filter:
@@ -154,7 +154,7 @@ class Betfair(object):
         )
 
     @utils.requires_login
-    def list_events(self, filter, locale):
+    def list_events(self, filter, locale=None):
         """
 
         :param MarketFilter filter:
@@ -168,7 +168,7 @@ class Betfair(object):
         )
 
     @utils.requires_login
-    def list_market_types(self, filter, locale):
+    def list_market_types(self, filter, locale=None):
         """
 
         :param MarketFilter filter:
@@ -411,3 +411,4 @@ class Betfair(object):
             utils.get_kwargs(locals()),
             model=models.UpdateExecutionReport,
         )
+
