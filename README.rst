@@ -42,7 +42,7 @@ You can write SSL certificates to another directory by passing the
 
 This will generate a file named ``ssl.pem`` in the ``path/to/certs/``
 directory. Once you have generated the SSL certificate, you can upload the
-.pem file to Betfair at https://myaccount.betfair.com/account/authentication?showAPI=1.
+.pem file to Betfair at https://myaccount.betfair.com/accountdetails/mysecurity?showAPI=1.
 
 Examples
 --------
