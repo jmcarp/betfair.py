@@ -60,7 +60,7 @@ class MarketCatalogue(BetfairModel):
     market_id = Field(DataType(six.text_type))
     market_name = Field(DataType(six.text_type))
     market_start_time = Field(datetime_type)
-    description = Field(EnumType(MarketDescription))
+    description = Field(ModelType(MarketDescription))
     total_matched = Field(DataType(float))
     runners = ListField(ModelType(RunnerCatalog))
     event_type = Field(ModelType(EventType))
