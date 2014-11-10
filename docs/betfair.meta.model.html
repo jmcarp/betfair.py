@@ -1,0 +1,174 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module betfair.meta.model</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="betfair.html"><font color="#ffffff">betfair</font></a>.<a href="betfair.meta.html"><font color="#ffffff">meta</font></a>.model</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/james/projects/betfair.py/betfair/meta/model.py">/home/james/projects/betfair.py/betfair/meta/model.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="copy.html">copy</a><br>
+</td><td width="25%" valign=top><a href="six.html">six</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="betfair.meta.model.html#Model">Model</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#type">__builtin__.type</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="betfair.meta.model.html#ModelMeta">ModelMeta</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Model">class <strong>Model</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Model">Model</a>&nbsp;base&nbsp;class.&nbsp;Subclasses&nbsp;should&nbsp;define&nbsp;`Field`&nbsp;descriptors,&nbsp;which<br>
+are&nbsp;collected&nbsp;in&nbsp;`_fields`.&nbsp;Note:&nbsp;to&nbsp;avoid&nbsp;circular&nbsp;definitions,&nbsp;the<br>
+`<a href="#ModelMeta">ModelMeta</a>`&nbsp;metaclass&nbsp;is&nbsp;not&nbsp;applied&nbsp;until&nbsp;after&nbsp;`<a href="#Model">Model</a>`&nbsp;has&nbsp;been&nbsp;defined.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Model-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="Model-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Model-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Model-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="Model-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<dl><dt><a name="Model-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {}</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ModelMeta">class <strong>ModelMeta</strong></a>(<a href="__builtin__.html#type">__builtin__.type</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Model">Model</a>&nbsp;metaclass.&nbsp;Collects&nbsp;field&nbsp;descriptors&nbsp;and&nbsp;inherits&nbsp;fields&nbsp;from<br>
+parent.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.meta.model.html#ModelMeta">ModelMeta</a></dd>
+<dd><a href="__builtin__.html#type">__builtin__.type</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ModelMeta-__init__"><strong>__init__</strong></a>(cls, name, bases, dct)</dt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#type">__builtin__.type</a>:<br>
+<dl><dt><a name="ModelMeta-__call__"><strong>__call__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__call__">__call__</a>(...)&nbsp;&lt;==&gt;&nbsp;x(...)</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__instancecheck__"><strong>__instancecheck__</strong></a>(...)</dt><dd><tt><a href="#ModelMeta-__instancecheck__">__instancecheck__</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;if&nbsp;an&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;is&nbsp;an&nbsp;instance</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#ModelMeta-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__subclasscheck__"><strong>__subclasscheck__</strong></a>(...)</dt><dd><tt><a href="#ModelMeta-__subclasscheck__">__subclasscheck__</a>()&nbsp;-&gt;&nbsp;bool<br>
+check&nbsp;if&nbsp;a&nbsp;class&nbsp;is&nbsp;a&nbsp;subclass</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-__subclasses__"><strong>__subclasses__</strong></a>(...)</dt><dd><tt><a href="#ModelMeta-__subclasses__">__subclasses__</a>()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;immediate&nbsp;subclasses</tt></dd></dl>
+
+<dl><dt><a name="ModelMeta-mro"><strong>mro</strong></a>(...)</dt><dd><tt><a href="#ModelMeta-mro">mro</a>()&nbsp;-&gt;&nbsp;list<br>
+return&nbsp;a&nbsp;<a href="__builtin__.html#type">type</a>'s&nbsp;method&nbsp;resolution&nbsp;order</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="__builtin__.html#type">__builtin__.type</a>:<br>
+<dl><dt><strong>__abstractmethods__</strong></dt>
+</dl>
+<dl><dt><strong>__base__</strong></dt>
+</dl>
+<dl><dt><strong>__bases__</strong></dt>
+</dl>
+<dl><dt><strong>__basicsize__</strong></dt>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__dictoffset__</strong></dt>
+</dl>
+<dl><dt><strong>__flags__</strong></dt>
+</dl>
+<dl><dt><strong>__itemsize__</strong></dt>
+</dl>
+<dl><dt><strong>__mro__</strong></dt>
+</dl>
+<dl><dt><strong>__weakrefoffset__</strong></dt>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#type">__builtin__.type</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#ModelMeta-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;<a href="__builtin__.html#type">type</a>&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-copy_fields"><strong>copy_fields</strong></a>(bases)</dt><dd><tt>Deep-copy&nbsp;and&nbsp;collect&nbsp;`Field`&nbsp;descriptors&nbsp;from&nbsp;base&nbsp;classes.<br>
+&nbsp;<br>
+:param&nbsp;list&nbsp;bases:&nbsp;Base&nbsp;classes<br>
+:returns:&nbsp;Dictionary&nbsp;of&nbsp;`Field`&nbsp;descriptors</tt></dd></dl>
+</td></tr></table>
+</body></html>

@@ -1,0 +1,204 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module betfair.betfair</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="betfair.html"><font color="#ffffff">betfair</font></a>.betfair</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/james/projects/betfair.py/betfair/betfair.py">/home/james/projects/betfair.py/betfair/betfair.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="betfair.exceptions.html">betfair.exceptions</a><br>
+<a href="httplib.html">httplib</a><br>
+<a href="itertools.html">itertools</a><br>
+</td><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="betfair.models.html">betfair.models</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+<a href="six.moves.urllib_parse.html">six.moves.urllib_parse</a><br>
+<a href="betfair.utils.html">betfair.utils</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="betfair.betfair.html#Betfair">Betfair</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Betfair">class <strong>Betfair</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Betfair">Betfair</a>&nbsp;API&nbsp;client.<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;app_key:&nbsp;Optional&nbsp;application&nbsp;identifier<br>
+:param&nbsp;str&nbsp;cert_file:&nbsp;Path&nbsp;to&nbsp;self-signed&nbsp;SSL&nbsp;certificate&nbsp;file(s);&nbsp;may&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;*.pem&nbsp;file&nbsp;or&nbsp;a&nbsp;tuple&nbsp;of&nbsp;(*.crt,&nbsp;*.key)&nbsp;files<br>
+:param&nbsp;str&nbsp;content_type:&nbsp;Response&nbsp;type<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Betfair-__init__"><strong>__init__</strong></a>(self, app_key, cert_file, content_type<font color="#909090">='application/json'</font>)</dt></dl>
+
+<dl><dt><a name="Betfair-cancel_orders"><strong>cancel_orders</strong></a>(self, market_id, instructions, customer_ref<font color="#909090">=None</font>)</dt><dd><tt>Cancel&nbsp;all&nbsp;bets&nbsp;OR&nbsp;cancel&nbsp;all&nbsp;bets&nbsp;on&nbsp;a&nbsp;market&nbsp;OR&nbsp;fully&nbsp;or<br>
+partially&nbsp;cancel&nbsp;particular&nbsp;orders&nbsp;on&nbsp;a&nbsp;market.<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;market_id:&nbsp;If&nbsp;not&nbsp;supplied&nbsp;all&nbsp;bets&nbsp;are&nbsp;cancelled<br>
+:param&nbsp;list&nbsp;instructions:&nbsp;List&nbsp;of&nbsp;`CancelInstruction`&nbsp;objects<br>
+:param&nbsp;str&nbsp;customer_ref:&nbsp;Optional&nbsp;order&nbsp;identifier&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="Betfair-iter_list_market_book"><strong>iter_list_market_book</strong></a>(self, market_ids, chunk_size, **kwargs)</dt><dd><tt>Split&nbsp;call&nbsp;to&nbsp;`list_market_book`&nbsp;into&nbsp;separate&nbsp;requests.<br>
+&nbsp;<br>
+:param&nbsp;list&nbsp;market_ids:&nbsp;List&nbsp;of&nbsp;market&nbsp;IDs<br>
+:param&nbsp;int&nbsp;chunk_size:&nbsp;Number&nbsp;of&nbsp;records&nbsp;per&nbsp;chunk<br>
+:param&nbsp;dict&nbsp;kwargs:&nbsp;Arguments&nbsp;passed&nbsp;to&nbsp;`list_market_book`</tt></dd></dl>
+
+<dl><dt><a name="Betfair-iter_list_market_profit_and_loss"><strong>iter_list_market_profit_and_loss</strong></a>(self, market_ids, chunk_size, **kwargs)</dt><dd><tt>Split&nbsp;call&nbsp;to&nbsp;`list_market_profit_and_loss`&nbsp;into&nbsp;separate&nbsp;requests.<br>
+&nbsp;<br>
+:param&nbsp;list&nbsp;market_ids:&nbsp;List&nbsp;of&nbsp;market&nbsp;IDs<br>
+:param&nbsp;int&nbsp;chunk_size:&nbsp;Number&nbsp;of&nbsp;records&nbsp;per&nbsp;chunk<br>
+:param&nbsp;dict&nbsp;kwargs:&nbsp;Arguments&nbsp;passed&nbsp;to&nbsp;`list_market_profit_and_loss`</tt></dd></dl>
+
+<dl><dt><a name="Betfair-keep_alive"><strong>keep_alive</strong></a>(self)</dt><dd><tt>Reset&nbsp;session&nbsp;timeout.<br>
+&nbsp;<br>
+:raises:&nbsp;BetfairAuthError</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_cleared_orders"><strong>list_cleared_orders</strong></a>(self, bet_status, event_type_ids, event_ids, market_ids, runner_ids, bet_ids, side, settled_date_range, group_by, include_item_description, locale, from_record, record_count)</dt><dd><tt>:param&nbsp;bet_status:<br>
+:param&nbsp;event_type_ids:<br>
+:param&nbsp;event_ids:<br>
+:param&nbsp;market_ids:<br>
+:param&nbsp;runner_ids:<br>
+:param&nbsp;bet_ids:<br>
+:param&nbsp;side:<br>
+:param&nbsp;settled_date_range:<br>
+:param&nbsp;group_by:<br>
+:param&nbsp;include_item_description:<br>
+:param&nbsp;locale:<br>
+:param&nbsp;from_record:<br>
+:param&nbsp;record_count:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_competitions"><strong>list_competitions</strong></a>(self, filter, locale<font color="#909090">=None</font>)</dt><dd><tt>:param&nbsp;MarketFilter&nbsp;filter:<br>
+:param&nbsp;str&nbsp;locale:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_countries"><strong>list_countries</strong></a>(self, filter, locale<font color="#909090">=None</font>)</dt><dd><tt>:param&nbsp;MarketFilter&nbsp;filter:<br>
+:param&nbsp;str&nbsp;locale:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_current_orders"><strong>list_current_orders</strong></a>(self, bet_ids, market_ids, order_projection, date_range, order_by, sort_dir, from_record, record_count)</dt><dd><tt>:param&nbsp;bet_ids:<br>
+:param&nbsp;market_ids:<br>
+:param&nbsp;order_projection:<br>
+:param&nbsp;date_range:<br>
+:param&nbsp;order_by:<br>
+:param&nbsp;sort_dir:<br>
+:param&nbsp;from_record:<br>
+:param&nbsp;record_count:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_event_types"><strong>list_event_types</strong></a>(self, filter, locale<font color="#909090">=None</font>)</dt><dd><tt>:param&nbsp;MarketFilter&nbsp;filter:<br>
+:param&nbsp;str&nbsp;locale:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_events"><strong>list_events</strong></a>(self, filter, locale<font color="#909090">=None</font>)</dt><dd><tt>:param&nbsp;MarketFilter&nbsp;filter:<br>
+:param&nbsp;str&nbsp;locale:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_market_book"><strong>list_market_book</strong></a>(self, market_ids, price_projection<font color="#909090">=None</font>, order_projection<font color="#909090">=None</font>, match_projection<font color="#909090">=None</font>, currency_code<font color="#909090">=None</font>, locale<font color="#909090">=None</font>)</dt><dd><tt>:param&nbsp;list&nbsp;market_ids:&nbsp;List&nbsp;of&nbsp;market&nbsp;IDs<br>
+:param&nbsp;PriceProjection&nbsp;price_projection:<br>
+:param&nbsp;OrderProjection&nbsp;order_projection:<br>
+:param&nbsp;MatchProjection&nbsp;match_projection:<br>
+:param&nbsp;str&nbsp;currency_code:<br>
+:param&nbsp;str&nbsp;locale:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_market_catalogue"><strong>list_market_catalogue</strong></a>(self, filter, max_results<font color="#909090">=100</font>, market_projection<font color="#909090">=None</font>, locale<font color="#909090">=None</font>, sort<font color="#909090">=None</font>)</dt><dd><tt>:param&nbsp;MarketFilter&nbsp;filter:<br>
+:param&nbsp;int&nbsp;max_results:<br>
+:param&nbsp;list&nbsp;market_projection:<br>
+:param&nbsp;MarketSort&nbsp;sort:<br>
+:param&nbsp;str&nbsp;locale:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_market_profit_and_loss"><strong>list_market_profit_and_loss</strong></a>(self, market_ids, include_settled_bets<font color="#909090">=False</font>, include_bsp_bets<font color="#909090">=None</font>, net_of_commission<font color="#909090">=None</font>)</dt><dd><tt>Retrieve&nbsp;profit&nbsp;and&nbsp;loss&nbsp;for&nbsp;a&nbsp;given&nbsp;list&nbsp;of&nbsp;markets.<br>
+&nbsp;<br>
+:param&nbsp;list&nbsp;market_ids:&nbsp;List&nbsp;of&nbsp;markets&nbsp;to&nbsp;calculate&nbsp;profit&nbsp;and&nbsp;loss<br>
+:param&nbsp;bool&nbsp;include_settled_bets:&nbsp;Option&nbsp;to&nbsp;include&nbsp;settled&nbsp;bets<br>
+:param&nbsp;bool&nbsp;include_bsp_bets:&nbsp;Option&nbsp;to&nbsp;include&nbsp;BSP&nbsp;bets<br>
+:param&nbsp;bool&nbsp;net_of_commission:&nbsp;Option&nbsp;to&nbsp;return&nbsp;profit&nbsp;and&nbsp;loss&nbsp;net&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;users&nbsp;current&nbsp;commission&nbsp;rate&nbsp;for&nbsp;this&nbsp;market&nbsp;including&nbsp;any&nbsp;special<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tariffs</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_market_types"><strong>list_market_types</strong></a>(self, filter, locale<font color="#909090">=None</font>)</dt><dd><tt>:param&nbsp;MarketFilter&nbsp;filter:<br>
+:param&nbsp;str&nbsp;locale:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_time_ranges"><strong>list_time_ranges</strong></a>(self, filter, granularity)</dt><dd><tt>:param&nbsp;MarketFilter&nbsp;filter:<br>
+:param&nbsp;TimeGranularity&nbsp;granularity:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-list_venues"><strong>list_venues</strong></a>(self, filter, locale<font color="#909090">=None</font>)</dt><dd><tt>:param&nbsp;MarketFilter&nbsp;filter:<br>
+:param&nbsp;str&nbsp;locale:</tt></dd></dl>
+
+<dl><dt><a name="Betfair-login"><strong>login</strong></a>(self, username, password)</dt><dd><tt>Log&nbsp;in&nbsp;to&nbsp;<a href="#Betfair">Betfair</a>.&nbsp;Sets&nbsp;`session_token`&nbsp;if&nbsp;successful.<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;username:&nbsp;Username<br>
+:param&nbsp;str&nbsp;password:&nbsp;Password<br>
+:raises:&nbsp;BetfairLoginError</tt></dd></dl>
+
+<dl><dt><a name="Betfair-logout"><strong>logout</strong></a>(self)</dt><dd><tt>Log&nbsp;out&nbsp;and&nbsp;clear&nbsp;`session_token`.<br>
+&nbsp;<br>
+:raises:&nbsp;BetfairAuthError</tt></dd></dl>
+
+<dl><dt><a name="Betfair-make_api_request"><strong>make_api_request</strong></a>(self, method, params, codes<font color="#909090">=None</font>, model<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Betfair-make_auth_request"><strong>make_auth_request</strong></a>(self, method)</dt></dl>
+
+<dl><dt><a name="Betfair-place_orders"><strong>place_orders</strong></a>(self, market_id, instructions, customer_ref<font color="#909090">=None</font>)</dt><dd><tt>Place&nbsp;new&nbsp;orders&nbsp;into&nbsp;market.&nbsp;This&nbsp;operation&nbsp;is&nbsp;atomic&nbsp;in&nbsp;that&nbsp;all<br>
+orders&nbsp;will&nbsp;be&nbsp;placed&nbsp;or&nbsp;none&nbsp;will&nbsp;be&nbsp;placed.<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;market_id:&nbsp;The&nbsp;market&nbsp;id&nbsp;these&nbsp;orders&nbsp;are&nbsp;to&nbsp;be&nbsp;placed&nbsp;on<br>
+:param&nbsp;list&nbsp;instructions:&nbsp;List&nbsp;of&nbsp;`PlaceInstruction`&nbsp;objects<br>
+:param&nbsp;str&nbsp;customer_ref:&nbsp;Optional&nbsp;order&nbsp;identifier&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="Betfair-replace_orders"><strong>replace_orders</strong></a>(self, market_id, instructions, customer_ref<font color="#909090">=None</font>)</dt><dd><tt>This&nbsp;operation&nbsp;is&nbsp;logically&nbsp;a&nbsp;bulk&nbsp;cancel&nbsp;followed&nbsp;by&nbsp;a&nbsp;bulk&nbsp;place.<br>
+The&nbsp;cancel&nbsp;is&nbsp;completed&nbsp;first&nbsp;then&nbsp;the&nbsp;new&nbsp;orders&nbsp;are&nbsp;placed.<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;market_id:&nbsp;The&nbsp;market&nbsp;id&nbsp;these&nbsp;orders&nbsp;are&nbsp;to&nbsp;be&nbsp;placed&nbsp;on<br>
+:param&nbsp;list&nbsp;instructions:&nbsp;List&nbsp;of&nbsp;`ReplaceInstruction`&nbsp;objects<br>
+:param&nbsp;str&nbsp;customer_ref:&nbsp;Optional&nbsp;order&nbsp;identifier&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="Betfair-update_orders"><strong>update_orders</strong></a>(self, market_id, instructions, customer_ref<font color="#909090">=None</font>)</dt><dd><tt>Update&nbsp;non-exposure&nbsp;changing&nbsp;fields.<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;market_id:&nbsp;The&nbsp;market&nbsp;id&nbsp;these&nbsp;orders&nbsp;are&nbsp;to&nbsp;be&nbsp;placed&nbsp;on<br>
+:param&nbsp;list&nbsp;instructions:&nbsp;List&nbsp;of&nbsp;`UpdateInstruction`&nbsp;objects<br>
+:param&nbsp;str&nbsp;customer_ref:&nbsp;Optional&nbsp;order&nbsp;identifier&nbsp;string</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>headers</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>API_URL</strong> = 'https://api.betfair.com/exchange/betting/json-rpc/v1/'<br>
+<strong>IDENTITY_URL</strong> = 'https://identitysso.betfair.com/api/'</td></tr></table>
+</body></html>
