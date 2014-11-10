@@ -1,0 +1,2707 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module betfair.models</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="betfair.html"><font color="#ffffff">betfair</font></a>.models</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/james/projects/betfair.py/betfair/models.py">/home/james/projects/betfair.py/betfair/models.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="betfair.constants.html">betfair.constants</a><br>
+</td><td width="25%" valign=top><a href="six.html">six</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>(<a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="betfair.models.html#CancelExecutionReport">CancelExecutionReport</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#PlaceExecutionReport">PlaceExecutionReport</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#ReplaceExecutionReport">ReplaceExecutionReport</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#UpdateExecutionReport">UpdateExecutionReport</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="betfair.models.html#CancelInstructionReport">CancelInstructionReport</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#PlaceInstructionReport">PlaceInstructionReport</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#ReplaceInstructionReport">ReplaceInstructionReport</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#UpdateInstructionReport">UpdateInstructionReport</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="betfair.models.html#CancelInstruction">CancelInstruction</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#ClearedOrderSummary">ClearedOrderSummary</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#ClearedOrderSummaryReport">ClearedOrderSummaryReport</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#Competition">Competition</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#CompetitionResult">CompetitionResult</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#CountryCodeResult">CountryCodeResult</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#CurrentOrderSummary">CurrentOrderSummary</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#CurrentOrderSummaryReport">CurrentOrderSummaryReport</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#Event">Event</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#EventResult">EventResult</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#EventType">EventType</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#EventTypeResult">EventTypeResult</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#ExBestOffersOverrides">ExBestOffersOverrides</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#ExchangePrices">ExchangePrices</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#ItemDescription">ItemDescription</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#LimitOnCloseOrder">LimitOnCloseOrder</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#LimitOrder">LimitOrder</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#MarketBook">MarketBook</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#MarketCatalogue">MarketCatalogue</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#MarketDescription">MarketDescription</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#MarketFilter">MarketFilter</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#MarketOnCloseOrder">MarketOnCloseOrder</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#MarketProfitAndLoss">MarketProfitAndLoss</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#MarketTypeResult">MarketTypeResult</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#Match">Match</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#Order">Order</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#PlaceInstruction">PlaceInstruction</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#PriceProjection">PriceProjection</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#PriceSize">PriceSize</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#ReplaceInstruction">ReplaceInstruction</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#Runner">Runner</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#RunnerCatalog">RunnerCatalog</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#RunnerProfitAndLoss">RunnerProfitAndLoss</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#StartingPrices">StartingPrices</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#TimeRange">TimeRange</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#TimeRangeResult">TimeRangeResult</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#UpdateInstruction">UpdateInstruction</a>
+</font></dt><dt><font face="helvetica, arial"><a href="betfair.models.html#VenueResult">VenueResult</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BaseExecutionReport">class <strong>BaseExecutionReport</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>customer_ref</strong></dt>
+</dl>
+<dl><dt><strong>error_code</strong></dt>
+</dl>
+<dl><dt><strong>market_id</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'customer_ref': &lt;betfair.meta.field.Field object&gt;, 'error_code': &lt;betfair.meta.field.Field object&gt;, 'market_id': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="BaseExecutionReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="BaseExecutionReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="BaseExecutionReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="BaseExecutionReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BaseExecutionReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BaseExecutionReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BaseInstructionReport">class <strong>BaseInstructionReport</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>error_code</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'error_code': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="BaseInstructionReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="BaseInstructionReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="BaseInstructionReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="BaseInstructionReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BaseInstructionReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BaseInstructionReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CancelExecutionReport">class <strong>CancelExecutionReport</strong></a>(<a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#CancelExecutionReport">CancelExecutionReport</a></dd>
+<dd><a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>instruction_reports</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'customer_ref': &lt;betfair.meta.field.Field object&gt;, 'error_code': &lt;betfair.meta.field.Field object&gt;, 'instruction_reports': &lt;betfair.meta.field.ListField object&gt;, 'market_id': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a>:<br>
+<dl><dt><strong>customer_ref</strong></dt>
+</dl>
+<dl><dt><strong>error_code</strong></dt>
+</dl>
+<dl><dt><strong>market_id</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="CancelExecutionReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="CancelExecutionReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="CancelExecutionReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="CancelExecutionReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CancelExecutionReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CancelExecutionReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CancelInstruction">class <strong>CancelInstruction</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#CancelInstruction">CancelInstruction</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>bet_id</strong></dt>
+</dl>
+<dl><dt><strong>size_reduction</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'bet_id': &lt;betfair.meta.field.Field object&gt;, 'size_reduction': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="CancelInstruction-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="CancelInstruction-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="CancelInstruction-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="CancelInstruction-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CancelInstruction-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CancelInstruction-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CancelInstructionReport">class <strong>CancelInstructionReport</strong></a>(<a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#CancelInstructionReport">CancelInstructionReport</a></dd>
+<dd><a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>cancelled_date</strong></dt>
+</dl>
+<dl><dt><strong>instruction</strong></dt>
+</dl>
+<dl><dt><strong>size_cancelled</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'cancelled_date': &lt;betfair.meta.field.Field object&gt;, 'error_code': &lt;betfair.meta.field.Field object&gt;, 'instruction': &lt;betfair.meta.field.Field object&gt;, 'size_cancelled': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a>:<br>
+<dl><dt><strong>error_code</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="CancelInstructionReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="CancelInstructionReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="CancelInstructionReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="CancelInstructionReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CancelInstructionReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CancelInstructionReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ClearedOrderSummary">class <strong>ClearedOrderSummary</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#ClearedOrderSummary">ClearedOrderSummary</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>bet_count</strong></dt>
+</dl>
+<dl><dt><strong>bet_id</strong></dt>
+</dl>
+<dl><dt><strong>commission</strong></dt>
+</dl>
+<dl><dt><strong>event_id</strong></dt>
+</dl>
+<dl><dt><strong>event_type_id</strong></dt>
+</dl>
+<dl><dt><strong>handicap</strong></dt>
+</dl>
+<dl><dt><strong>item_description</strong></dt>
+</dl>
+<dl><dt><strong>market_id</strong></dt>
+</dl>
+<dl><dt><strong>order_type</strong></dt>
+</dl>
+<dl><dt><strong>persistence_type</strong></dt>
+</dl>
+<dl><dt><strong>placed_data</strong></dt>
+</dl>
+<dl><dt><strong>price_matched</strong></dt>
+</dl>
+<dl><dt><strong>price_reduced</strong></dt>
+</dl>
+<dl><dt><strong>price_requested</strong></dt>
+</dl>
+<dl><dt><strong>profit</strong></dt>
+</dl>
+<dl><dt><strong>selection_id</strong></dt>
+</dl>
+<dl><dt><strong>settled_date</strong></dt>
+</dl>
+<dl><dt><strong>side</strong></dt>
+</dl>
+<dl><dt><strong>size_cancelled</strong></dt>
+</dl>
+<dl><dt><strong>size_settled</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'bet_count': &lt;betfair.meta.field.Field object&gt;, 'bet_id': &lt;betfair.meta.field.Field object&gt;, 'commission': &lt;betfair.meta.field.Field object&gt;, 'event_id': &lt;betfair.meta.field.Field object&gt;, 'event_type_id': &lt;betfair.meta.field.Field object&gt;, 'handicap': &lt;betfair.meta.field.Field object&gt;, 'item_description': &lt;betfair.meta.field.Field object&gt;, 'market_id': &lt;betfair.meta.field.Field object&gt;, 'order_type': &lt;betfair.meta.field.Field object&gt;, 'persistence_type': &lt;betfair.meta.field.Field object&gt;, ...}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="ClearedOrderSummary-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="ClearedOrderSummary-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="ClearedOrderSummary-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="ClearedOrderSummary-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ClearedOrderSummary-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ClearedOrderSummary-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ClearedOrderSummaryReport">class <strong>ClearedOrderSummaryReport</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#ClearedOrderSummaryReport">ClearedOrderSummaryReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>current_orders</strong></dt>
+</dl>
+<dl><dt><strong>more_available</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'current_orders': &lt;betfair.meta.field.ListField object&gt;, 'more_available': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="ClearedOrderSummaryReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="ClearedOrderSummaryReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="ClearedOrderSummaryReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="ClearedOrderSummaryReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ClearedOrderSummaryReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ClearedOrderSummaryReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Competition">class <strong>Competition</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#Competition">Competition</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>name</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'id': &lt;betfair.meta.field.Field object&gt;, 'name': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="Competition-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="Competition-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="Competition-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="Competition-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Competition-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Competition-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CompetitionResult">class <strong>CompetitionResult</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#CompetitionResult">CompetitionResult</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>competition</strong></dt>
+</dl>
+<dl><dt><strong>competition_region</strong></dt>
+</dl>
+<dl><dt><strong>market_count</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'competition': &lt;betfair.meta.field.Field object&gt;, 'competition_region': &lt;betfair.meta.field.Field object&gt;, 'market_count': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="CompetitionResult-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="CompetitionResult-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="CompetitionResult-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="CompetitionResult-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CompetitionResult-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CompetitionResult-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CountryCodeResult">class <strong>CountryCodeResult</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#CountryCodeResult">CountryCodeResult</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>country_code</strong></dt>
+</dl>
+<dl><dt><strong>market_count</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'country_code': &lt;betfair.meta.field.Field object&gt;, 'market_count': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="CountryCodeResult-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="CountryCodeResult-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="CountryCodeResult-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="CountryCodeResult-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CountryCodeResult-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CountryCodeResult-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CurrentOrderSummary">class <strong>CurrentOrderSummary</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#CurrentOrderSummary">CurrentOrderSummary</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>average_price_matched</strong></dt>
+</dl>
+<dl><dt><strong>bet_id</strong></dt>
+</dl>
+<dl><dt><strong>bsp_liability</strong></dt>
+</dl>
+<dl><dt><strong>handicap</strong></dt>
+</dl>
+<dl><dt><strong>market_id</strong></dt>
+</dl>
+<dl><dt><strong>matched_date</strong></dt>
+</dl>
+<dl><dt><strong>order_type</strong></dt>
+</dl>
+<dl><dt><strong>persistence_type</strong></dt>
+</dl>
+<dl><dt><strong>placed_date</strong></dt>
+</dl>
+<dl><dt><strong>price_size</strong></dt>
+</dl>
+<dl><dt><strong>regulator_auth_code</strong></dt>
+</dl>
+<dl><dt><strong>regulator_code</strong></dt>
+</dl>
+<dl><dt><strong>selection_id</strong></dt>
+</dl>
+<dl><dt><strong>side</strong></dt>
+</dl>
+<dl><dt><strong>size_cancelled</strong></dt>
+</dl>
+<dl><dt><strong>size_lapsed</strong></dt>
+</dl>
+<dl><dt><strong>size_matched</strong></dt>
+</dl>
+<dl><dt><strong>size_remaining</strong></dt>
+</dl>
+<dl><dt><strong>size_voided</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'average_price_matched': &lt;betfair.meta.field.Field object&gt;, 'bet_id': &lt;betfair.meta.field.Field object&gt;, 'bsp_liability': &lt;betfair.meta.field.Field object&gt;, 'handicap': &lt;betfair.meta.field.Field object&gt;, 'market_id': &lt;betfair.meta.field.Field object&gt;, 'matched_date': &lt;betfair.meta.field.Field object&gt;, 'order_type': &lt;betfair.meta.field.Field object&gt;, 'persistence_type': &lt;betfair.meta.field.Field object&gt;, 'placed_date': &lt;betfair.meta.field.Field object&gt;, 'price_size': &lt;betfair.meta.field.Field object&gt;, ...}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="CurrentOrderSummary-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="CurrentOrderSummary-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="CurrentOrderSummary-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="CurrentOrderSummary-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CurrentOrderSummary-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CurrentOrderSummary-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CurrentOrderSummaryReport">class <strong>CurrentOrderSummaryReport</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#CurrentOrderSummaryReport">CurrentOrderSummaryReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>current_orders</strong></dt>
+</dl>
+<dl><dt><strong>more_available</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'current_orders': &lt;betfair.meta.field.ListField object&gt;, 'more_available': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="CurrentOrderSummaryReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="CurrentOrderSummaryReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="CurrentOrderSummaryReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="CurrentOrderSummaryReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CurrentOrderSummaryReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CurrentOrderSummaryReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Event">class <strong>Event</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#Event">Event</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>country_code</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>name</strong></dt>
+</dl>
+<dl><dt><strong>open_date</strong></dt>
+</dl>
+<dl><dt><strong>timezone</strong></dt>
+</dl>
+<dl><dt><strong>venue</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'country_code': &lt;betfair.meta.field.Field object&gt;, 'id': &lt;betfair.meta.field.Field object&gt;, 'name': &lt;betfair.meta.field.Field object&gt;, 'open_date': &lt;betfair.meta.field.Field object&gt;, 'timezone': &lt;betfair.meta.field.Field object&gt;, 'venue': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="Event-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="Event-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="Event-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="Event-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Event-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Event-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="EventResult">class <strong>EventResult</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#EventResult">EventResult</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>event</strong></dt>
+</dl>
+<dl><dt><strong>market_count</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'event': &lt;betfair.meta.field.Field object&gt;, 'market_count': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="EventResult-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="EventResult-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="EventResult-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="EventResult-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="EventResult-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="EventResult-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="EventType">class <strong>EventType</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#EventType">EventType</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>name</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'id': &lt;betfair.meta.field.Field object&gt;, 'name': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="EventType-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="EventType-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="EventType-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="EventType-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="EventType-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="EventType-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="EventTypeResult">class <strong>EventTypeResult</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#EventTypeResult">EventTypeResult</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>event_type</strong></dt>
+</dl>
+<dl><dt><strong>market_count</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'event_type': &lt;betfair.meta.field.Field object&gt;, 'market_count': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="EventTypeResult-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="EventTypeResult-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="EventTypeResult-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="EventTypeResult-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="EventTypeResult-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="EventTypeResult-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExBestOffersOverrides">class <strong>ExBestOffersOverrides</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#ExBestOffersOverrides">ExBestOffersOverrides</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>best_prices_depth</strong></dt>
+</dl>
+<dl><dt><strong>rollup_liability_factor</strong></dt>
+</dl>
+<dl><dt><strong>rollup_liability_threshold</strong></dt>
+</dl>
+<dl><dt><strong>rollup_limit</strong></dt>
+</dl>
+<dl><dt><strong>rollup_model</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'best_prices_depth': &lt;betfair.meta.field.Field object&gt;, 'rollup_liability_factor': &lt;betfair.meta.field.Field object&gt;, 'rollup_liability_threshold': &lt;betfair.meta.field.Field object&gt;, 'rollup_limit': &lt;betfair.meta.field.Field object&gt;, 'rollup_model': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="ExBestOffersOverrides-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="ExBestOffersOverrides-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="ExBestOffersOverrides-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="ExBestOffersOverrides-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ExBestOffersOverrides-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ExBestOffersOverrides-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExchangePrices">class <strong>ExchangePrices</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#ExchangePrices">ExchangePrices</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>available_to_back</strong></dt>
+</dl>
+<dl><dt><strong>available_to_lay</strong></dt>
+</dl>
+<dl><dt><strong>traded_volume</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'available_to_back': &lt;betfair.meta.field.ListField object&gt;, 'available_to_lay': &lt;betfair.meta.field.ListField object&gt;, 'traded_volume': &lt;betfair.meta.field.ListField object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="ExchangePrices-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="ExchangePrices-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="ExchangePrices-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="ExchangePrices-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ExchangePrices-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ExchangePrices-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ItemDescription">class <strong>ItemDescription</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#ItemDescription">ItemDescription</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>event_desc</strong></dt>
+</dl>
+<dl><dt><strong>event_type_desc</strong></dt>
+</dl>
+<dl><dt><strong>market_desc</strong></dt>
+</dl>
+<dl><dt><strong>market_start_Time</strong></dt>
+</dl>
+<dl><dt><strong>number_of_winners</strong></dt>
+</dl>
+<dl><dt><strong>runner_desc</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'event_desc': &lt;betfair.meta.field.Field object&gt;, 'event_type_desc': &lt;betfair.meta.field.Field object&gt;, 'market_desc': &lt;betfair.meta.field.Field object&gt;, 'market_start_Time': &lt;betfair.meta.field.Field object&gt;, 'number_of_winners': &lt;betfair.meta.field.Field object&gt;, 'runner_desc': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="ItemDescription-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="ItemDescription-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="ItemDescription-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="ItemDescription-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ItemDescription-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ItemDescription-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LimitOnCloseOrder">class <strong>LimitOnCloseOrder</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#LimitOnCloseOrder">LimitOnCloseOrder</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>liability</strong></dt>
+</dl>
+<dl><dt><strong>price</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'liability': &lt;betfair.meta.field.Field object&gt;, 'price': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="LimitOnCloseOrder-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="LimitOnCloseOrder-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="LimitOnCloseOrder-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="LimitOnCloseOrder-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LimitOnCloseOrder-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LimitOnCloseOrder-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LimitOrder">class <strong>LimitOrder</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#LimitOrder">LimitOrder</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>persistence_type</strong></dt>
+</dl>
+<dl><dt><strong>price</strong></dt>
+</dl>
+<dl><dt><strong>size</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'persistence_type': &lt;betfair.meta.field.Field object&gt;, 'price': &lt;betfair.meta.field.Field object&gt;, 'size': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="LimitOrder-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="LimitOrder-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="LimitOrder-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="LimitOrder-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LimitOrder-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LimitOrder-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MarketBook">class <strong>MarketBook</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#MarketBook">MarketBook</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>bet_delay</strong></dt>
+</dl>
+<dl><dt><strong>bsp_reconciled</strong></dt>
+</dl>
+<dl><dt><strong>complete</strong></dt>
+</dl>
+<dl><dt><strong>cross_matching</strong></dt>
+</dl>
+<dl><dt><strong>inplay</strong></dt>
+</dl>
+<dl><dt><strong>is_market_data_delayed</strong></dt>
+</dl>
+<dl><dt><strong>last_match_time</strong></dt>
+</dl>
+<dl><dt><strong>market_id</strong></dt>
+</dl>
+<dl><dt><strong>number_of_active_runners</strong></dt>
+</dl>
+<dl><dt><strong>number_of_runners</strong></dt>
+</dl>
+<dl><dt><strong>number_of_winners</strong></dt>
+</dl>
+<dl><dt><strong>runners</strong></dt>
+</dl>
+<dl><dt><strong>runners_voidable</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<dl><dt><strong>total_available</strong></dt>
+</dl>
+<dl><dt><strong>total_matched</strong></dt>
+</dl>
+<dl><dt><strong>version</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'bet_delay': &lt;betfair.meta.field.Field object&gt;, 'bsp_reconciled': &lt;betfair.meta.field.Field object&gt;, 'complete': &lt;betfair.meta.field.Field object&gt;, 'cross_matching': &lt;betfair.meta.field.Field object&gt;, 'inplay': &lt;betfair.meta.field.Field object&gt;, 'is_market_data_delayed': &lt;betfair.meta.field.Field object&gt;, 'last_match_time': &lt;betfair.meta.field.Field object&gt;, 'market_id': &lt;betfair.meta.field.Field object&gt;, 'number_of_active_runners': &lt;betfair.meta.field.Field object&gt;, 'number_of_runners': &lt;betfair.meta.field.Field object&gt;, ...}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="MarketBook-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="MarketBook-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="MarketBook-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="MarketBook-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketBook-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketBook-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MarketCatalogue">class <strong>MarketCatalogue</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#MarketCatalogue">MarketCatalogue</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>competition</strong></dt>
+</dl>
+<dl><dt><strong>description</strong></dt>
+</dl>
+<dl><dt><strong>event</strong></dt>
+</dl>
+<dl><dt><strong>event_type</strong></dt>
+</dl>
+<dl><dt><strong>market_id</strong></dt>
+</dl>
+<dl><dt><strong>market_name</strong></dt>
+</dl>
+<dl><dt><strong>market_start_time</strong></dt>
+</dl>
+<dl><dt><strong>runners</strong></dt>
+</dl>
+<dl><dt><strong>total_matched</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'competition': &lt;betfair.meta.field.Field object&gt;, 'description': &lt;betfair.meta.field.Field object&gt;, 'event': &lt;betfair.meta.field.Field object&gt;, 'event_type': &lt;betfair.meta.field.Field object&gt;, 'market_id': &lt;betfair.meta.field.Field object&gt;, 'market_name': &lt;betfair.meta.field.Field object&gt;, 'market_start_time': &lt;betfair.meta.field.Field object&gt;, 'runners': &lt;betfair.meta.field.ListField object&gt;, 'total_matched': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="MarketCatalogue-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="MarketCatalogue-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="MarketCatalogue-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="MarketCatalogue-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketCatalogue-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketCatalogue-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MarketDescription">class <strong>MarketDescription</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#MarketDescription">MarketDescription</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>betting_type</strong></dt>
+</dl>
+<dl><dt><strong>bsp_market</strong></dt>
+</dl>
+<dl><dt><strong>clarifications</strong></dt>
+</dl>
+<dl><dt><strong>discount_allowed</strong></dt>
+</dl>
+<dl><dt><strong>market_base_rate</strong></dt>
+</dl>
+<dl><dt><strong>market_time</strong></dt>
+</dl>
+<dl><dt><strong>market_type</strong></dt>
+</dl>
+<dl><dt><strong>persistence_enabled</strong></dt>
+</dl>
+<dl><dt><strong>regulator</strong></dt>
+</dl>
+<dl><dt><strong>rules</strong></dt>
+</dl>
+<dl><dt><strong>rules_has_date</strong></dt>
+</dl>
+<dl><dt><strong>settle_time</strong></dt>
+</dl>
+<dl><dt><strong>suspend_time</strong></dt>
+</dl>
+<dl><dt><strong>turn_in_play_enabled</strong></dt>
+</dl>
+<dl><dt><strong>wallet</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'betting_type': &lt;betfair.meta.field.Field object&gt;, 'bsp_market': &lt;betfair.meta.field.Field object&gt;, 'clarifications': &lt;betfair.meta.field.Field object&gt;, 'discount_allowed': &lt;betfair.meta.field.Field object&gt;, 'market_base_rate': &lt;betfair.meta.field.Field object&gt;, 'market_time': &lt;betfair.meta.field.Field object&gt;, 'market_type': &lt;betfair.meta.field.Field object&gt;, 'persistence_enabled': &lt;betfair.meta.field.Field object&gt;, 'regulator': &lt;betfair.meta.field.Field object&gt;, 'rules': &lt;betfair.meta.field.Field object&gt;, ...}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="MarketDescription-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="MarketDescription-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="MarketDescription-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="MarketDescription-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketDescription-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketDescription-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MarketFilter">class <strong>MarketFilter</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#MarketFilter">MarketFilter</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>bsp_only</strong></dt>
+</dl>
+<dl><dt><strong>competition_ids</strong></dt>
+</dl>
+<dl><dt><strong>event_ids</strong></dt>
+</dl>
+<dl><dt><strong>event_type_ids</strong></dt>
+</dl>
+<dl><dt><strong>exchange_ids</strong></dt>
+</dl>
+<dl><dt><strong>in_play_only</strong></dt>
+</dl>
+<dl><dt><strong>market_betting_types</strong></dt>
+</dl>
+<dl><dt><strong>market_countries</strong></dt>
+</dl>
+<dl><dt><strong>market_ids</strong></dt>
+</dl>
+<dl><dt><strong>market_start_time</strong></dt>
+</dl>
+<dl><dt><strong>market_type_codes</strong></dt>
+</dl>
+<dl><dt><strong>text_query</strong></dt>
+</dl>
+<dl><dt><strong>turn_in_play_enabled</strong></dt>
+</dl>
+<dl><dt><strong>venues</strong></dt>
+</dl>
+<dl><dt><strong>with_orders</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'bsp_only': &lt;betfair.meta.field.Field object&gt;, 'competition_ids': &lt;betfair.meta.field.ListField object&gt;, 'event_ids': &lt;betfair.meta.field.ListField object&gt;, 'event_type_ids': &lt;betfair.meta.field.ListField object&gt;, 'exchange_ids': &lt;betfair.meta.field.ListField object&gt;, 'in_play_only': &lt;betfair.meta.field.Field object&gt;, 'market_betting_types': &lt;betfair.meta.field.ListField object&gt;, 'market_countries': &lt;betfair.meta.field.ListField object&gt;, 'market_ids': &lt;betfair.meta.field.ListField object&gt;, 'market_start_time': &lt;betfair.meta.field.Field object&gt;, ...}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="MarketFilter-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="MarketFilter-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="MarketFilter-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="MarketFilter-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketFilter-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketFilter-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MarketOnCloseOrder">class <strong>MarketOnCloseOrder</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#MarketOnCloseOrder">MarketOnCloseOrder</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>liability</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'liability': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="MarketOnCloseOrder-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="MarketOnCloseOrder-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="MarketOnCloseOrder-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="MarketOnCloseOrder-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketOnCloseOrder-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketOnCloseOrder-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MarketProfitAndLoss">class <strong>MarketProfitAndLoss</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#MarketProfitAndLoss">MarketProfitAndLoss</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>commission_applied</strong></dt>
+</dl>
+<dl><dt><strong>market_id</strong></dt>
+</dl>
+<dl><dt><strong>profit_and_losses</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'commission_applied': &lt;betfair.meta.field.Field object&gt;, 'market_id': &lt;betfair.meta.field.Field object&gt;, 'profit_and_losses': &lt;betfair.meta.field.ListField object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="MarketProfitAndLoss-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="MarketProfitAndLoss-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="MarketProfitAndLoss-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="MarketProfitAndLoss-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketProfitAndLoss-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketProfitAndLoss-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MarketTypeResult">class <strong>MarketTypeResult</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#MarketTypeResult">MarketTypeResult</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>market_count</strong></dt>
+</dl>
+<dl><dt><strong>market_type</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'market_count': &lt;betfair.meta.field.Field object&gt;, 'market_type': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="MarketTypeResult-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="MarketTypeResult-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="MarketTypeResult-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="MarketTypeResult-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketTypeResult-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MarketTypeResult-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Match">class <strong>Match</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#Match">Match</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>bet_id</strong></dt>
+</dl>
+<dl><dt><strong>match_date</strong></dt>
+</dl>
+<dl><dt><strong>match_id</strong></dt>
+</dl>
+<dl><dt><strong>price</strong></dt>
+</dl>
+<dl><dt><strong>side</strong></dt>
+</dl>
+<dl><dt><strong>size</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'bet_id': &lt;betfair.meta.field.Field object&gt;, 'match_date': &lt;betfair.meta.field.Field object&gt;, 'match_id': &lt;betfair.meta.field.Field object&gt;, 'price': &lt;betfair.meta.field.Field object&gt;, 'side': &lt;betfair.meta.field.Field object&gt;, 'size': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="Match-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="Match-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="Match-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="Match-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Match-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Match-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Order">class <strong>Order</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#Order">Order</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>avg_price_matched</strong></dt>
+</dl>
+<dl><dt><strong>bet_id</strong></dt>
+</dl>
+<dl><dt><strong>bsp_liability</strong></dt>
+</dl>
+<dl><dt><strong>order_type</strong></dt>
+</dl>
+<dl><dt><strong>persistence_type</strong></dt>
+</dl>
+<dl><dt><strong>placed_date</strong></dt>
+</dl>
+<dl><dt><strong>price</strong></dt>
+</dl>
+<dl><dt><strong>side</strong></dt>
+</dl>
+<dl><dt><strong>size</strong></dt>
+</dl>
+<dl><dt><strong>size_cancelled</strong></dt>
+</dl>
+<dl><dt><strong>size_lapsed</strong></dt>
+</dl>
+<dl><dt><strong>size_matched</strong></dt>
+</dl>
+<dl><dt><strong>size_remaining</strong></dt>
+</dl>
+<dl><dt><strong>size_voided</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'avg_price_matched': &lt;betfair.meta.field.Field object&gt;, 'bet_id': &lt;betfair.meta.field.Field object&gt;, 'bsp_liability': &lt;betfair.meta.field.Field object&gt;, 'order_type': &lt;betfair.meta.field.Field object&gt;, 'persistence_type': &lt;betfair.meta.field.Field object&gt;, 'placed_date': &lt;betfair.meta.field.Field object&gt;, 'price': &lt;betfair.meta.field.Field object&gt;, 'side': &lt;betfair.meta.field.Field object&gt;, 'size': &lt;betfair.meta.field.Field object&gt;, 'size_cancelled': &lt;betfair.meta.field.Field object&gt;, ...}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="Order-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="Order-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="Order-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="Order-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Order-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Order-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PlaceExecutionReport">class <strong>PlaceExecutionReport</strong></a>(<a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#PlaceExecutionReport">PlaceExecutionReport</a></dd>
+<dd><a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>instruction_reports</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'customer_ref': &lt;betfair.meta.field.Field object&gt;, 'error_code': &lt;betfair.meta.field.Field object&gt;, 'instruction_reports': &lt;betfair.meta.field.ListField object&gt;, 'market_id': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a>:<br>
+<dl><dt><strong>customer_ref</strong></dt>
+</dl>
+<dl><dt><strong>error_code</strong></dt>
+</dl>
+<dl><dt><strong>market_id</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="PlaceExecutionReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="PlaceExecutionReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="PlaceExecutionReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="PlaceExecutionReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PlaceExecutionReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PlaceExecutionReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PlaceInstruction">class <strong>PlaceInstruction</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#PlaceInstruction">PlaceInstruction</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>handicap</strong></dt>
+</dl>
+<dl><dt><strong>limit_on_close_order</strong></dt>
+</dl>
+<dl><dt><strong>limit_order</strong></dt>
+</dl>
+<dl><dt><strong>market_on_close_order</strong></dt>
+</dl>
+<dl><dt><strong>order_type</strong></dt>
+</dl>
+<dl><dt><strong>selection_id</strong></dt>
+</dl>
+<dl><dt><strong>side</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'handicap': &lt;betfair.meta.field.Field object&gt;, 'limit_on_close_order': &lt;betfair.meta.field.Field object&gt;, 'limit_order': &lt;betfair.meta.field.Field object&gt;, 'market_on_close_order': &lt;betfair.meta.field.Field object&gt;, 'order_type': &lt;betfair.meta.field.Field object&gt;, 'selection_id': &lt;betfair.meta.field.Field object&gt;, 'side': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="PlaceInstruction-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="PlaceInstruction-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="PlaceInstruction-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="PlaceInstruction-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PlaceInstruction-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PlaceInstruction-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PlaceInstructionReport">class <strong>PlaceInstructionReport</strong></a>(<a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#PlaceInstructionReport">PlaceInstructionReport</a></dd>
+<dd><a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>average_price_matched</strong></dt>
+</dl>
+<dl><dt><strong>bet_id</strong></dt>
+</dl>
+<dl><dt><strong>instruction</strong></dt>
+</dl>
+<dl><dt><strong>placed_date</strong></dt>
+</dl>
+<dl><dt><strong>size_matched</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'average_price_matched': &lt;betfair.meta.field.Field object&gt;, 'bet_id': &lt;betfair.meta.field.Field object&gt;, 'error_code': &lt;betfair.meta.field.Field object&gt;, 'instruction': &lt;betfair.meta.field.Field object&gt;, 'placed_date': &lt;betfair.meta.field.Field object&gt;, 'size_matched': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a>:<br>
+<dl><dt><strong>error_code</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="PlaceInstructionReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="PlaceInstructionReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="PlaceInstructionReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="PlaceInstructionReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PlaceInstructionReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PlaceInstructionReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PriceProjection">class <strong>PriceProjection</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#PriceProjection">PriceProjection</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>ex_best_offer_overrides</strong></dt>
+</dl>
+<dl><dt><strong>price_data</strong></dt>
+</dl>
+<dl><dt><strong>rollover_stakes</strong></dt>
+</dl>
+<dl><dt><strong>virtualize</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'ex_best_offer_overrides': &lt;betfair.meta.field.Field object&gt;, 'price_data': &lt;betfair.meta.field.ListField object&gt;, 'rollover_stakes': &lt;betfair.meta.field.Field object&gt;, 'virtualize': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="PriceProjection-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="PriceProjection-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="PriceProjection-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="PriceProjection-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PriceProjection-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PriceProjection-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PriceSize">class <strong>PriceSize</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#PriceSize">PriceSize</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>price</strong></dt>
+</dl>
+<dl><dt><strong>size</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'price': &lt;betfair.meta.field.Field object&gt;, 'size': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="PriceSize-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="PriceSize-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="PriceSize-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="PriceSize-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PriceSize-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PriceSize-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ReplaceExecutionReport">class <strong>ReplaceExecutionReport</strong></a>(<a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#ReplaceExecutionReport">ReplaceExecutionReport</a></dd>
+<dd><a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>instruction_reports</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'customer_ref': &lt;betfair.meta.field.Field object&gt;, 'error_code': &lt;betfair.meta.field.Field object&gt;, 'instruction_reports': &lt;betfair.meta.field.ListField object&gt;, 'market_id': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a>:<br>
+<dl><dt><strong>customer_ref</strong></dt>
+</dl>
+<dl><dt><strong>error_code</strong></dt>
+</dl>
+<dl><dt><strong>market_id</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="ReplaceExecutionReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="ReplaceExecutionReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="ReplaceExecutionReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="ReplaceExecutionReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ReplaceExecutionReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ReplaceExecutionReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ReplaceInstruction">class <strong>ReplaceInstruction</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#ReplaceInstruction">ReplaceInstruction</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>bet_id</strong></dt>
+</dl>
+<dl><dt><strong>new_price</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'bet_id': &lt;betfair.meta.field.Field object&gt;, 'new_price': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="ReplaceInstruction-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="ReplaceInstruction-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="ReplaceInstruction-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="ReplaceInstruction-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ReplaceInstruction-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ReplaceInstruction-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ReplaceInstructionReport">class <strong>ReplaceInstructionReport</strong></a>(<a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#ReplaceInstructionReport">ReplaceInstructionReport</a></dd>
+<dd><a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>cancel_instruction_report</strong></dt>
+</dl>
+<dl><dt><strong>place_instruction_report</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'cancel_instruction_report': &lt;betfair.meta.field.Field object&gt;, 'error_code': &lt;betfair.meta.field.Field object&gt;, 'place_instruction_report': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a>:<br>
+<dl><dt><strong>error_code</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="ReplaceInstructionReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="ReplaceInstructionReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="ReplaceInstructionReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="ReplaceInstructionReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ReplaceInstructionReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ReplaceInstructionReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Runner">class <strong>Runner</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#Runner">Runner</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>adjustment_factor</strong></dt>
+</dl>
+<dl><dt><strong>ex</strong></dt>
+</dl>
+<dl><dt><strong>handicap</strong></dt>
+</dl>
+<dl><dt><strong>last_price_traded</strong></dt>
+</dl>
+<dl><dt><strong>matches</strong></dt>
+</dl>
+<dl><dt><strong>orders</strong></dt>
+</dl>
+<dl><dt><strong>removal_date</strong></dt>
+</dl>
+<dl><dt><strong>selection_id</strong></dt>
+</dl>
+<dl><dt><strong>sp</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<dl><dt><strong>total_matched</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'adjustment_factor': &lt;betfair.meta.field.Field object&gt;, 'ex': &lt;betfair.meta.field.Field object&gt;, 'handicap': &lt;betfair.meta.field.Field object&gt;, 'last_price_traded': &lt;betfair.meta.field.Field object&gt;, 'matches': &lt;betfair.meta.field.ListField object&gt;, 'orders': &lt;betfair.meta.field.ListField object&gt;, 'removal_date': &lt;betfair.meta.field.Field object&gt;, 'selection_id': &lt;betfair.meta.field.Field object&gt;, 'sp': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;, ...}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="Runner-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="Runner-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="Runner-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="Runner-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Runner-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Runner-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RunnerCatalog">class <strong>RunnerCatalog</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#RunnerCatalog">RunnerCatalog</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>handicap</strong></dt>
+</dl>
+<dl><dt><strong>metadata</strong></dt>
+</dl>
+<dl><dt><strong>runner_name</strong></dt>
+</dl>
+<dl><dt><strong>selection_id</strong></dt>
+</dl>
+<dl><dt><strong>sort_priority</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'handicap': &lt;betfair.meta.field.Field object&gt;, 'metadata': &lt;betfair.meta.field.Field object&gt;, 'runner_name': &lt;betfair.meta.field.Field object&gt;, 'selection_id': &lt;betfair.meta.field.Field object&gt;, 'sort_priority': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="RunnerCatalog-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="RunnerCatalog-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="RunnerCatalog-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="RunnerCatalog-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RunnerCatalog-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RunnerCatalog-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RunnerProfitAndLoss">class <strong>RunnerProfitAndLoss</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#RunnerProfitAndLoss">RunnerProfitAndLoss</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>if_lose</strong></dt>
+</dl>
+<dl><dt><strong>if_win</strong></dt>
+</dl>
+<dl><dt><strong>selection_id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'if_lose': &lt;betfair.meta.field.Field object&gt;, 'if_win': &lt;betfair.meta.field.Field object&gt;, 'selection_id': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="RunnerProfitAndLoss-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="RunnerProfitAndLoss-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="RunnerProfitAndLoss-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="RunnerProfitAndLoss-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RunnerProfitAndLoss-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RunnerProfitAndLoss-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="StartingPrices">class <strong>StartingPrices</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#StartingPrices">StartingPrices</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>actual_SP</strong></dt>
+</dl>
+<dl><dt><strong>back_state_taken</strong></dt>
+</dl>
+<dl><dt><strong>far_price</strong></dt>
+</dl>
+<dl><dt><strong>lay_liability_taken</strong></dt>
+</dl>
+<dl><dt><strong>near_price</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'actual_SP': &lt;betfair.meta.field.Field object&gt;, 'back_state_taken': &lt;betfair.meta.field.Field object&gt;, 'far_price': &lt;betfair.meta.field.Field object&gt;, 'lay_liability_taken': &lt;betfair.meta.field.Field object&gt;, 'near_price': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="StartingPrices-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="StartingPrices-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="StartingPrices-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="StartingPrices-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="StartingPrices-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="StartingPrices-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TimeRange">class <strong>TimeRange</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#TimeRange">TimeRange</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>from_</strong></dt>
+</dl>
+<dl><dt><strong>to</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'from_': &lt;betfair.meta.field.Field object&gt;, 'to': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="TimeRange-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="TimeRange-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="TimeRange-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="TimeRange-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TimeRange-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TimeRange-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TimeRangeResult">class <strong>TimeRangeResult</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#TimeRangeResult">TimeRangeResult</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>market_count</strong></dt>
+</dl>
+<dl><dt><strong>time_range</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'market_count': &lt;betfair.meta.field.Field object&gt;, 'time_range': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="TimeRangeResult-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="TimeRangeResult-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="TimeRangeResult-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="TimeRangeResult-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TimeRangeResult-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TimeRangeResult-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UpdateExecutionReport">class <strong>UpdateExecutionReport</strong></a>(<a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#UpdateExecutionReport">UpdateExecutionReport</a></dd>
+<dd><a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>instruction_reports</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'customer_ref': &lt;betfair.meta.field.Field object&gt;, 'error_code': &lt;betfair.meta.field.Field object&gt;, 'instruction_reports': &lt;betfair.meta.field.ListField object&gt;, 'market_id': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.models.html#BaseExecutionReport">BaseExecutionReport</a>:<br>
+<dl><dt><strong>customer_ref</strong></dt>
+</dl>
+<dl><dt><strong>error_code</strong></dt>
+</dl>
+<dl><dt><strong>market_id</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="UpdateExecutionReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="UpdateExecutionReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="UpdateExecutionReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="UpdateExecutionReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UpdateExecutionReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UpdateExecutionReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UpdateInstruction">class <strong>UpdateInstruction</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#UpdateInstruction">UpdateInstruction</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>bet_id</strong></dt>
+</dl>
+<dl><dt><strong>new_persistence_type</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'bet_id': &lt;betfair.meta.field.Field object&gt;, 'new_persistence_type': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="UpdateInstruction-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="UpdateInstruction-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="UpdateInstruction-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="UpdateInstruction-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UpdateInstruction-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UpdateInstruction-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UpdateInstructionReport">class <strong>UpdateInstructionReport</strong></a>(<a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#UpdateInstructionReport">UpdateInstructionReport</a></dd>
+<dd><a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>instruction</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'error_code': &lt;betfair.meta.field.Field object&gt;, 'instruction': &lt;betfair.meta.field.Field object&gt;, 'status': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.models.html#BaseInstructionReport">BaseInstructionReport</a>:<br>
+<dl><dt><strong>error_code</strong></dt>
+</dl>
+<dl><dt><strong>status</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="UpdateInstructionReport-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="UpdateInstructionReport-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="UpdateInstructionReport-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="UpdateInstructionReport-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UpdateInstructionReport-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="UpdateInstructionReport-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="VenueResult">class <strong>VenueResult</strong></a>(<a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="betfair.models.html#VenueResult">VenueResult</a></dd>
+<dd><a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a></dd>
+<dd><a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>market_count</strong></dt>
+</dl>
+<dl><dt><strong>venue</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>_fields</strong> = {'market_count': &lt;betfair.meta.field.Field object&gt;, 'venue': &lt;betfair.meta.field.Field object&gt;}</dl>
+
+<hr>
+Methods inherited from <a href="betfair.model.html#BetfairModel">betfair.model.BetfairModel</a>:<br>
+<dl><dt><a name="VenueResult-serialize_key"><strong>serialize_key</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="VenueResult-unserialize_key"><strong>unserialize_key</strong></a>(self, key)</dt></dl>
+
+<hr>
+Methods inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><a name="VenueResult-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="VenueResult-check_complete"><strong>check_complete</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="VenueResult-serialize"><strong>serialize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="VenueResult-unserialize"><strong>unserialize</strong></a>(self, kwargs)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="betfair.meta.model.html#Model">betfair.meta.model.Model</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>datetime_type</strong> = &lt;betfair.meta.datatype.DataType object&gt;</td></tr></table>
+</body></html>
