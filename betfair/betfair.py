@@ -112,13 +112,15 @@ class Betfair(object):
     # Bet query methods
 
     @utils.requires_login
-    def list_event_types(self, filter, locale=None):
+    def list_event_types(self, filter=None, locale=None):
         """
 
         :param MarketFilter filter:
         :param str locale:
 
         """
+        if filter is None:
+            filter = {}
         return self.make_api_request(
             'listEventTypes',
             utils.get_kwargs(locals()),
@@ -126,13 +128,15 @@ class Betfair(object):
         )
 
     @utils.requires_login
-    def list_competitions(self, filter, locale=None):
+    def list_competitions(self, filter=None, locale=None):
         """
 
         :param MarketFilter filter:
         :param str locale:
 
         """
+        if filter is None:
+          filter = {}
         return self.make_api_request(
             'listCompetitions',
             utils.get_kwargs(locals()),
@@ -140,13 +144,15 @@ class Betfair(object):
         )
 
     @utils.requires_login
-    def list_time_ranges(self, filter, granularity):
+    def list_time_ranges(self, granularity, filter=None):
         """
 
-        :param MarketFilter filter:
         :param TimeGranularity granularity:
+        :param MarketFilter filter:
 
         """
+        if filter is None:
+          filter = {}
         return self.make_api_request(
             'listTimeRanges',
             utils.get_kwargs(locals()),
@@ -154,13 +160,15 @@ class Betfair(object):
         )
 
     @utils.requires_login
-    def list_events(self, filter, locale=None):
+    def list_events(self, filter=None, locale=None):
         """
 
         :param MarketFilter filter:
         :param str locale:
 
         """
+        if filter is None:
+          filter = {}
         return self.make_api_request(
             'listEvents',
             utils.get_kwargs(locals()),
@@ -168,13 +176,15 @@ class Betfair(object):
         )
 
     @utils.requires_login
-    def list_market_types(self, filter, locale=None):
+    def list_market_types(self, filter=None, locale=None):
         """
 
         :param MarketFilter filter:
         :param str locale:
 
         """
+        if filter is None:
+          filter = {}
         return self.make_api_request(
             'listMarketTypes',
             utils.get_kwargs(locals()),
@@ -182,13 +192,15 @@ class Betfair(object):
         )
 
     @utils.requires_login
-    def list_countries(self, filter, locale=None):
+    def list_countries(self, filter=None, locale=None):
         """
 
         :param MarketFilter filter:
         :param str locale:
 
         """
+        if filter is None:
+          filter = {}
         return self.make_api_request(
             'listCountries',
             utils.get_kwargs(locals()),
@@ -196,13 +208,15 @@ class Betfair(object):
         )
 
     @utils.requires_login
-    def list_venues(self, filter, locale=None):
+    def list_venues(self, filter=None, locale=None):
         """
 
         :param MarketFilter filter:
         :param str locale:
 
         """
+        if filter is None:
+          filter = {}
         return self.make_api_request(
             'listCountries',
             utils.get_kwargs(locals()),
@@ -211,7 +225,7 @@ class Betfair(object):
 
     @utils.requires_login
     def list_market_catalogue(
-            self, filter, max_results=100, market_projection=None, locale=None,
+            self, filter=None, max_results=100, market_projection=None, locale=None,
             sort=None):
         """
 
@@ -222,6 +236,8 @@ class Betfair(object):
         :param str locale:
 
         """
+        if filter is None:
+          filter = {}
         return self.make_api_request(
             'listMarketCatalogue',
             utils.get_kwargs(locals()),
