@@ -40,7 +40,7 @@ def generate_pem(name=DEFAULT_NAME):
     key_file = '{0}.key'.format(name)
     crt_file = '{0}.crt'.format(name)
     pem_file = '{0}.pem'.format(name)
-    cmd = 'cat {0} {1} > {2}'.format(key_file, crt_file, pem_file)
+    cmd = 'cat {0} {1} > {2}'.format(crt_file, key_file, pem_file)
     run(cmd)
 
 
