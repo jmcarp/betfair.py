@@ -50,7 +50,7 @@ Examples
 Create a Betfair client and log in ::
 
     from betfair import Betfair
-    client = Betfair('test', 'certs/betfair.pem')
+    client = Betfair('app_key', 'certs/betfair.pem')
     client.login('username', 'password')
 
 Refresh session token ::
@@ -67,7 +67,7 @@ List all tennis markets ::
     event_types = client.list_event_types(
         MarketFilter(text_query='tennis')
     )
-    print(len(event_types))                 # 1
+    print(len(event_types))                 # 2
     print(event_types[0].event_type.name)   # 'Tennis'
     tennis_event_type = event_types[0]
     markets = client.list_market_catalogue(
