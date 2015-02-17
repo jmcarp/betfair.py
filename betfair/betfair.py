@@ -13,7 +13,6 @@ from . import exceptions
 
 
 IDENTITY_URL = 'https://identitysso.betfair.com/api/'
-API_URL = 'https://api.betfair.com/exchange/betting/json-rpc/v1/'
 
 
 class Betfair(object):
@@ -31,6 +30,24 @@ class Betfair(object):
         self.content_type = content_type
         self.session = requests.Session()
         self.session_token = None
+        self.API_URL = None
+
+    # Set api_url
+    @property
+    def api_url(self):
+	"""Retreive a value for self.API_URL"""
+        return self.API_URL
+
+    @api_url.setter
+    def api_url(self, exchange):
+	"""Set value of self.API_URL based on which exchange is desired"""
+        # Australian exchange requires different endpoints, override on demand.
+        if exchange.lower() == 'australian':
+            self.API_URL = \
+                'https://api-au.betfair.com/exchange/betting/json-rpc/v1/'
+        else:
+            self.API_URL = \
+                'https://api.betfair.com/exchange/betting/json-rpc/v1/'
 
     @property
     def headers(self):
@@ -54,7 +71,7 @@ class Betfair(object):
     def make_api_request(self, method, params, codes=None, model=None):
         payload = utils.make_payload(method, params)
         response = self.session.post(
-            API_URL,
+            self.API_URL,
             data=json.dumps(payload),
             headers=self.headers,
         )
