@@ -378,7 +378,7 @@ class Betfair(object):
         return self.make_api_request(
             'cancelOrders',
             utils.get_kwargs(locals()),
-            model=models.CancelInstructionReport,
+            model=models.CancelExecutionReport,
         )
 
     @utils.requires_login
