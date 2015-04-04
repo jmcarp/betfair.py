@@ -409,3 +409,14 @@ class ReplaceExecutionReport(BaseExecutionReport):
 
 class UpdateExecutionReport(BaseExecutionReport):
     instruction_reports = ListType(ModelType(UpdateInstructionReport))
+
+
+# Accounts
+
+class AccountFundsResponse(BetfairModel):
+    available_to_bet_balance = FloatType()
+    exposure = FloatType()
+    retained_commission = FloatType()
+    exposure_limit = FloatType()
+    discount_rate = FloatType()
+    points_balance = IntType()

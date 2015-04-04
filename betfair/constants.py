@@ -234,3 +234,24 @@ BetStatus = Enum(
         'CANCELLED',
     ]
 )
+
+Exchange = Enum(
+    "Exchange", [
+        "AUS",
+        "UK",
+    ]
+)
+
+Endpoint = Enum(
+    "Endpoint", [
+        "Betting",
+        "Account",
+    ]
+)
+
+Wallet = Enum(
+    'Wallet', [
+        'UK',
+        'AUSTRALIAN',
+    ]
+)

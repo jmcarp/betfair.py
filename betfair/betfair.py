@@ -426,3 +426,15 @@ class Betfair(object):
             utils.get_kwargs(locals()),
             model=models.UpdateExecutionReport,
         )
+
+    @utils.requires_login
+    def get_account_funds(self, wallet=None):
+        """Get available to bet amount.
+
+        :param Wallet wallet: Name of the wallet in question
+        """
+        result = self.make_api_request(
+            'getAccountFunds',
+            utils.get_kwargs(locals()),
+            model=models.AccountFundsResponse,
+        )
