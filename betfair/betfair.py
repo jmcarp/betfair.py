@@ -478,11 +478,25 @@ class Betfair(object):
 
     @utils.requires_login
     def get_account_details(self):
-        """Get the account details
+        """Returns the details relating your account, including your discount
+        rate and Betfair point balance.
         """
         result = self.network_client.invoke_sync(
             'Accounts',
             'getAccountDetails',
             utils.get_kwargs(locals()),
             model=models.AccountDetailsResponse,
+        )
+
+    @utils.requires_login
+    def list_currency_rates(self, from_currency=None):
+        """Returns a list of currency rates based on given currency
+
+        :param str from_currency: The currency from which the rates are computed
+        """
+        result = self.network_client.invoke_sync(
+            'Accounts',
+            'listCurrencyRates',
+            utils.get_kwargs(locals()),
+            model=models.CurrencyRate,
         )

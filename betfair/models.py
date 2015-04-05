@@ -470,3 +470,8 @@ class AccountDetailsResponse(BetfairModel):
 class AccountStatementReport(BetfairModel):
     account_statement = ListType(ModelType(StatementItem))
     more_available = BooleanType()
+
+
+class CurrencyRate(BetfairModel):
+    currency_code = StringType()
+    rate = FloatType()
