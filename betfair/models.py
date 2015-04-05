@@ -455,6 +455,18 @@ class StatementItem(BetfairModel):
     legacy_data = ModelType(StatementLegacyData)
 
 
+class AccountDetailsResponse(BetfairModel):
+    currency_code = StringType()
+    first_name = StringType()
+    last_name = StringType()
+    locale_code = StringType()
+    region = StringType()
+    timezone = StringType()
+    discount_rate = FloatType()
+    points_balance = IntType()
+    country_code = StringType()
+
+
 class AccountStatementReport(BetfairModel):
     account_statement = ListType(ModelType(StatementItem))
     more_available = BooleanType()

@@ -475,3 +475,14 @@ class Betfair(object):
             utils.get_kwargs(locals()),
             model=models.AccountStatementReport,
         )
+
+    @utils.requires_login
+    def get_account_details(self):
+        """Get the account details
+        """
+        result = self.network_client.invoke_sync(
+            'Accounts',
+            'getAccountDetails',
+            utils.get_kwargs(locals()),
+            model=models.AccountDetailsResponse,
+        )
