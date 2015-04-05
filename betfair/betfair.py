@@ -481,7 +481,7 @@ class Betfair(object):
         """Returns the details relating your account, including your discount
         rate and Betfair point balance.
         """
-        result = self.network_client.invoke_sync(
+        result = self.make_api_request(
             'Accounts',
             'getAccountDetails',
             utils.get_kwargs(locals()),
@@ -494,9 +494,24 @@ class Betfair(object):
 
         :param str from_currency: The currency from which the rates are computed
         """
-        result = self.network_client.invoke_sync(
+        result = self.make_api_request(
             'Accounts',
             'listCurrencyRates',
             utils.get_kwargs(locals()),
             model=models.CurrencyRate,
+        )
+
+    @utils.requires_login
+    def transfer_funds(self, from_, to, amount):
+        """Transfer funds between the UK Exchange and Australian Exchange wallets.
+
+        :param Wallet from_: Source wallet
+        :param Wallet to: Destination wallet
+        :param float amount: Amount to transfer
+        """
+        result = self.make_api_request(
+            'Accounts',
+            'transferFunds',
+            utils.get_kwargs(locals()),
+            model=models.TransferResponse,
         )

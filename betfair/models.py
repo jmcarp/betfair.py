@@ -475,3 +475,7 @@ class AccountStatementReport(BetfairModel):
 class CurrencyRate(BetfairModel):
     currency_code = StringType()
     rate = FloatType()
+
+
+class TransferResponse(BetfairModel):
+    transaction_id = StringType()
