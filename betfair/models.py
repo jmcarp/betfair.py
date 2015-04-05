@@ -3,6 +3,7 @@
 from __future__ import absolute_import
 
 from schematics.types import IntType
+from schematics.types import LongType
 from schematics.types import FloatType
 from schematics.types import StringType
 from schematics.types import BooleanType
@@ -420,3 +421,40 @@ class AccountFundsResponse(BetfairModel):
     exposure_limit = FloatType()
     discount_rate = FloatType()
     points_balance = IntType()
+    wallet = EnumType(constants.Wallet)
+
+
+class StatementLegacyData(BetfairModel):
+    avg_price = FloatType()
+    bet_size = FloatType()
+    bet_type = StringType()
+    bet_category_type = StringType()
+    commission_rate = StringType()
+    event_id = LongType()
+    event_type_id = LongType()
+    full_market_name = StringType()
+    gross_bet_amount = FloatType()
+    market_name = StringType()
+    market_type = StringType()
+    placed_date = DateTimeType()
+    selection_id = LongType()
+    selection_name = StringType()
+    start_date = DateTimeType()
+    transaction_type = StringType()
+    transaction_id = LongType()
+    win_lose = StringType()
+
+
+class StatementItem(BetfairModel):
+    ref_id = StringType()
+    item_date = DateTimeType()
+    amount = FloatType()
+    balance = FloatType()
+    item_class = EnumType(constants.ItemClass)
+    item_class_data = DictType(StringType)
+    legacy_data = ModelType(StatementLegacyData)
+
+
+class AccountStatementReport(BetfairModel):
+    account_statement = ListType(ModelType(StatementItem))
+    more_available = BooleanType()

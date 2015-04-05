@@ -236,16 +236,16 @@ BetStatus = Enum(
 )
 
 Exchange = Enum(
-    "Exchange", [
-        "AUS",
-        "UK",
+    'Exchange', [
+        'AUS',
+        'UK',
     ]
 )
 
 Endpoint = Enum(
-    "Endpoint", [
-        "Betting",
-        "Account",
+    'Endpoint', [
+        'Betting',
+        'Account',
     ]
 )
 
@@ -253,5 +253,20 @@ Wallet = Enum(
     'Wallet', [
         'UK',
         'AUSTRALIAN',
+    ]
+)
+
+IncludeItem = Enum(
+    'IncludeItem', [
+        'ALL',
+        'DEPOSITS_WITHDRAWALS',
+        'EXCHANGE',
+        'POKER_ROOM',
+    ]
+)
+
+ItemClass = Enum(
+    'ItemClass', [
+        'UNKNOWN',
     ]
 )

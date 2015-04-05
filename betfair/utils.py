@@ -97,15 +97,16 @@ class BetfairEncoder(json.JSONEncoder):
         return super(BetfairEncoder, self).default(o)
 
 
-def make_payload(method, params):
+def make_payload(base, method, params):
     """Build Betfair JSON-RPC payload.
 
+    :param str base: Betfair base ("Sports" or "Account")
     :param str method: Betfair endpoint
     :param dict params: Request parameters
     """
     payload = {
         'jsonrpc': '2.0',
-        'method': 'SportsAPING/v1.0/{0}'.format(method),
+        'method': '{base}/v1.0/{endpoint}'.format(**locals()),
         'params': utils.serialize_dict(params),
         'id': 1,
     }

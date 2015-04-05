@@ -76,8 +76,8 @@ class Betfair(object):
         if data.get('status') != 'SUCCESS':
             raise exceptions.AuthError(response, data)
 
-    def make_api_request(self, method, params, codes=None, model=None):
-        payload = utils.make_payload(method, params)
+    def make_api_request(self, base, method, params, codes=None, model=None):
+        payload = utils.make_payload(base, method, params)
         response = self.session.post(
             self.api_url,
             data=json.dumps(payload, cls=utils.BetfairEncoder),
@@ -144,6 +144,7 @@ class Betfair(object):
         """
         filter = filter or models.MarketFilter()
         return self.make_api_request(
+            'Sports',
             'listEventTypes',
             utils.get_kwargs(locals()),
             model=models.EventTypeResult,
@@ -158,6 +159,7 @@ class Betfair(object):
         """
         filter = filter or models.MarketFilter()
         return self.make_api_request(
+            'Sports',
             'listCompetitions',
             utils.get_kwargs(locals()),
             model=models.CompetitionResult,
@@ -172,6 +174,7 @@ class Betfair(object):
         """
         filter = filter or models.MarketFilter()
         return self.make_api_request(
+            'Sports',
             'listTimeRanges',
             utils.get_kwargs(locals()),
             model=models.TimeRangeResult,
@@ -186,6 +189,7 @@ class Betfair(object):
         """
         filter = filter or models.MarketFilter()
         return self.make_api_request(
+            'Sports',
             'listEvents',
             utils.get_kwargs(locals()),
             model=models.EventResult,
@@ -200,6 +204,7 @@ class Betfair(object):
         """
         filter = filter or models.MarketFilter()
         return self.make_api_request(
+            'Sports',
             'listMarketTypes',
             utils.get_kwargs(locals()),
             model=models.MarketTypeResult,
@@ -214,6 +219,7 @@ class Betfair(object):
         """
         filter = filter or models.MarketFilter()
         return self.make_api_request(
+            'Sports',
             'listCountries',
             utils.get_kwargs(locals()),
             model=models.CountryCodeResult,
@@ -228,6 +234,7 @@ class Betfair(object):
         """
         filter = filter or models.MarketFilter()
         return self.make_api_request(
+            'Sports',
             'listCountries',
             utils.get_kwargs(locals()),
             model=models.VenueResult,
@@ -247,6 +254,7 @@ class Betfair(object):
         """
         filter = filter or models.MarketFilter()
         return self.make_api_request(
+            'Sports',
             'listMarketCatalogue',
             utils.get_kwargs(locals()),
             model=models.MarketCatalogue,
@@ -266,6 +274,7 @@ class Betfair(object):
         :param str locale:
         """
         return self.make_api_request(
+            'Sports',
             'listMarketBook',
             utils.get_kwargs(locals()),
             model=models.MarketBook,
@@ -285,6 +294,7 @@ class Betfair(object):
             tariffs
         """
         return self.make_api_request(
+            'Sports',
             'listMarketProfitAndLoss',
             utils.get_kwargs(locals()),
             model=models.MarketProfitAndLoss,
@@ -336,6 +346,7 @@ class Betfair(object):
         :param record_count:
         """
         return self.make_api_request(
+            'Sports',
             'listCurrentOrders',
             utils.get_kwargs(locals()),
             model=models.CurrentOrderSummaryReport,
@@ -363,6 +374,7 @@ class Betfair(object):
         :param record_count:
         """
         return self.make_api_request(
+            'Sports',
             'listClearedOrders',
             utils.get_kwargs(locals()),
             model=models.ClearedOrderSummaryReport,
@@ -378,6 +390,7 @@ class Betfair(object):
         :param str customer_ref: Optional order identifier string
         """
         return self.make_api_request(
+            'Sports',
             'placeOrders',
             utils.get_kwargs(locals()),
             model=models.PlaceExecutionReport,
@@ -393,6 +406,7 @@ class Betfair(object):
         :param str customer_ref: Optional order identifier string
         """
         return self.make_api_request(
+            'Sports',
             'cancelOrders',
             utils.get_kwargs(locals()),
             model=models.CancelInstructionReport,
@@ -408,6 +422,7 @@ class Betfair(object):
         :param str customer_ref: Optional order identifier string
         """
         return self.make_api_request(
+            'Sports',
             'replaceOrders',
             utils.get_kwargs(locals()),
             model=models.ReplaceExecutionReport,
@@ -422,6 +437,7 @@ class Betfair(object):
         :param str customer_ref: Optional order identifier string
         """
         return self.make_api_request(
+            'Sports',
             'updateOrders',
             utils.get_kwargs(locals()),
             model=models.UpdateExecutionReport,
@@ -434,7 +450,28 @@ class Betfair(object):
         :param Wallet wallet: Name of the wallet in question
         """
         result = self.make_api_request(
+            'Accounts',
             'getAccountFunds',
             utils.get_kwargs(locals()),
             model=models.AccountFundsResponse,
+        )
+
+    @utils.requires_login
+    def get_account_statement(
+            self, locale=None, from_record=None, record_count=None,
+            item_date_range=None, include_item=None, wallet=None):
+        """Get account statement.
+
+        :param str locale: The language to be used where applicable
+        :param int from_record: Specifies the first record that will be returned
+        :param int record_count: Specifies the maximum number of records to be returned
+        :param TimeRange item_date_range: Return items with an itemDate within this date range
+        :param IncludeItem include_item: Which items to include
+        :param Wallet wallte: Which wallet to return statementItems for
+        """
+        result = self.make_api_request(
+            'Accounts',
+            'getAccountStatement',
+            utils.get_kwargs(locals()),
+            model=models.AccountStatementReport,
         )
