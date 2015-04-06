@@ -53,7 +53,8 @@ def test_headers(client):
         'X-Authentication': client.session_token,
         'Content-Type': client.content_type,
         'Accept': 'application/json',
-        'Connection': 'keep-alive'
+        'Connection': 'keep-alive',
+        'Accept-Encoding': 'gzip, deflate'
     }
     assert headers == expected
 
