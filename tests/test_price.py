@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from betfair.price import nearest_price, ticks_difference
+from betfair.price import nearest_price, price_ticks_away, ticks_difference
 
 @pytest.mark.parametrize(('price', 'expected'), [
     (0.1, 1.01), (1, 1.01), (1000.1, 1000), (2000, 1000.0), (1.01, 1.01), (2.02, 2.02),
@@ -22,3 +22,14 @@ def test_nearest_price(price, expected):
 ])
 def test_ticks_difference(price_1, price_2, expected):
     assert ticks_difference(price_1, price_2) == expected
+
+
+@pytest.mark.parametrize(('price', 'n_ticks', 'expected'), [
+    (1.01, 0, 1.01), (1.01, 1, 1.02), (2.0, 1, 2.02), (3.00, 1, 3.05),
+    (4.0, 1, 4.1), (6.0, 1, 6.2), (10, 1, 10.5), (20, 1, 21), (30, 1, 32),
+    (50, 1, 55), (100, 1, 110), (1.02, -1, 1.01), (2.02, -1, 2.00),
+    (3.05, -1, 3.00), (4.1, -1, 4.0), (6.2, -1, 6.0), (10.5, -1, 10),
+    (21, -1, 20), (32, -1, 30), (55, -1, 50), (110, -1, 100)
+])
+def test_price_ticks_away(price, n_ticks, expected):
+    assert price_ticks_away(price, n_ticks) == expected
