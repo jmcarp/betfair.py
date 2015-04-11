@@ -73,3 +73,17 @@ def nearest_price(price):
         return to_bf_price(decimal_price, Decimal(0.1))
     else:
         return 1000.0
+
+
+def ticks_difference(price_1, price_2):
+    """Returns the absolute difference in terms of "ticks" (i.e. individual
+    price increments) between two Betfair prices.
+
+    :param float price_1: An exact, valid Betfair price
+    :param float price_2: An exact, valid Betfair price
+    :returns: The absolute value of the difference between the prices in "ticks"
+    :rtype: int
+    """
+    price_1_index = PRICES.index(price_1)
+    price_2_index = PRICES.index(price_2)
+    return abs(price_1_index - price_2_index)
