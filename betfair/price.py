@@ -87,3 +87,18 @@ def ticks_difference(price_1, price_2):
     price_1_index = PRICES.index(price_1)
     price_2_index = PRICES.index(price_2)
     return abs(price_1_index - price_2_index)
+
+
+def price_ticks_away(price, n_ticks):
+    """Returns an exact, valid Betffair price that is n_ticks "ticks" away from
+    the given price. n_ticks may positive, negative or zero (in which case the
+    same price is returned) but if there is no price n_ticks away from the
+    given price then an exception will be thrown.
+
+    :param float price: An exact, valid Betfair price
+    :param float n_ticks: The number of ticks away from price the new price is
+    :returns: An exact, valid Betfair price
+    :rtype: float
+    """
+    price_index = PRICES.index(price)
+    return PRICES[price_index + n_ticks]
