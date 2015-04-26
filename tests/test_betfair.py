@@ -26,6 +26,26 @@ def test_client_init(client):
     assert client.session_token is None
 
 
+@pytest.mark.parametrize(['locale', 'identity_url'], [
+    (None, 'https://identitysso.betfair.com/api/'),
+    ('australia', 'https://identitysso.betfair.com/api/'),
+    ('italy', 'https://identitysso.betfair.it/api/'),
+])
+def test_identity_url(locale, identity_url):
+    client_ = betfair.Betfair('', '', locale=locale)
+    assert client_.identity_url == identity_url
+
+
+@pytest.mark.parametrize(['locale', 'api_url'], [
+    (None, 'https://api.betfair.com/exchange/betting/json-rpc/v1'),
+    ('italy', 'https://api.betfair.com/exchange/betting/json-rpc/v1'),
+    ('australia', 'https://api-au.betfair.com/exchange/betting/json-rpc/v1'),
+])
+def test_api_url(locale, api_url):
+    client_ = betfair.Betfair('', '', locale=locale)
+    assert client_.api_url == api_url
+
+
 def test_headers(client):
     headers = client.headers
     expected = {

@@ -20,7 +20,7 @@ def logged_in_client(client):
     return client
 
 login_success = response_fixture_factory(
-    os.path.join(betfair.IDENTITY_URL, 'certlogin'),
+    os.path.join(betfair.IDENTITY_URLS[None], 'certlogin'),
     {
         'loginStatus': 'SUCCESS',
         'sessionToken': 'secret',
@@ -28,17 +28,17 @@ login_success = response_fixture_factory(
 )
 
 login_failure = response_fixture_factory(
-    os.path.join(betfair.IDENTITY_URL, 'certlogin'),
+    os.path.join(betfair.IDENTITY_URLS[None], 'certlogin'),
     {'loginStatus': 'INVALID_USERNAME_OR_PASSWORD'},
 )
 
 keepalive_success = response_fixture_factory(
-    os.path.join(betfair.IDENTITY_URL, 'keepAlive'),
+    os.path.join(betfair.IDENTITY_URLS[None], 'keepAlive'),
     {'status': 'SUCCESS'},
 )
 
 keepalive_failure = response_fixture_factory(
-    os.path.join(betfair.IDENTITY_URL, 'keepAlive'),
+    os.path.join(betfair.IDENTITY_URLS[None], 'keepAlive'),
     {
         'status': 'FAIL',
         'error': 'NO_SESSION',
@@ -46,12 +46,12 @@ keepalive_failure = response_fixture_factory(
 )
 
 logout_success = response_fixture_factory(
-    os.path.join(betfair.IDENTITY_URL, 'logout'),
+    os.path.join(betfair.IDENTITY_URLS[None], 'logout'),
     {'status': 'SUCCESS'},
 )
 
 logout_failure = response_fixture_factory(
-    os.path.join(betfair.IDENTITY_URL, 'logout'),
+    os.path.join(betfair.IDENTITY_URLS[None], 'logout'),
     {
         'status': 'FAIL',
         'error': 'NO_SESSION',

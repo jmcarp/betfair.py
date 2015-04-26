@@ -2,8 +2,10 @@
 
 import os
 import json
-import requests
 import itertools
+import collections
+
+import requests
 from six.moves import http_client as httplib
 from six.moves import urllib_parse as urllib
 
@@ -12,7 +14,15 @@ from . import models
 from . import exceptions
 
 
-IDENTITY_URL = 'https://identitysso.betfair.com/api/'
+IDENTITY_URLS = collections.defaultdict(
+    lambda: 'https://identitysso.betfair.com/api/',
+    italy='https://identitysso.betfair.it/api/',
+)
+
+API_URLS = collections.defaultdict(
+    lambda: 'https://api.betfair.com/exchange/betting/json-rpc/v1',
+    australia='https://api-au.betfair.com/exchange/betting/json-rpc/v1',
+)
 
 
 class Betfair(object):
@@ -21,32 +31,24 @@ class Betfair(object):
     :param str app_key: Optional application identifier
     :param str cert_file: Path to self-signed SSL certificate file(s); may be
         a *.pem file or a tuple of (*.crt, *.key) files
-    :param str content_type: Response type
+    :param str content_type: Optional content type
+    :param str locale: Optional location ("australia", "italy", etc.)
     """
-    def __init__(self, app_key, cert_file, content_type='application/json'):
+    def __init__(self, app_key, cert_file, content_type='application/json', locale=None):
         self.app_key = app_key
         self.cert_file = cert_file
         self.content_type = content_type
+        self.locale = locale
         self.session = requests.Session()
         self.session_token = None
-        self.API_URL = None
 
-    # Set api_url
+    @property
+    def identity_url(self):
+        return IDENTITY_URLS[self.locale]
+
     @property
     def api_url(self):
-	"""Retreive a value for self.API_URL"""
-        return self.API_URL
-
-    @api_url.setter
-    def api_url(self, exchange):
-	"""Set value of self.API_URL based on which exchange is desired"""
-        # Australian exchange requires different endpoints, override on demand.
-        if exchange.lower() == 'australian':
-            self.API_URL = \
-                'https://api-au.betfair.com/exchange/betting/json-rpc/v1/'
-        else:
-            self.API_URL = \
-                'https://api.betfair.com/exchange/betting/json-rpc/v1/'
+        return API_URLS[self.locale]
 
     @property
     def headers(self):
@@ -59,7 +61,7 @@ class Betfair(object):
 
     def make_auth_request(self, method):
         response = self.session.post(
-            os.path.join(IDENTITY_URL, method),
+            os.path.join(self.identity_url, method),
             headers=self.headers,
         )
         utils.check_status_code(response)
@@ -70,7 +72,7 @@ class Betfair(object):
     def make_api_request(self, method, params, codes=None, model=None):
         payload = utils.make_payload(method, params)
         response = self.session.post(
-            self.API_URL,
+            self.api_url,
             data=json.dumps(payload),
             headers=self.headers,
         )
@@ -88,7 +90,7 @@ class Betfair(object):
         :raises: BetfairLoginError
         """
         response = self.session.post(
-            os.path.join(IDENTITY_URL, 'certlogin'),
+            os.path.join(self.identity_url, 'certlogin'),
             cert=self.cert_file,
             data=urllib.urlencode({
                 'username': username,
