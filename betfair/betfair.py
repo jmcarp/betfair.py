@@ -133,7 +133,7 @@ class Betfair(object):
         :param MarketFilter filter:
         :param str locale:
         """
-        filter = filter or None
+        filter = filter or models.MarketFilter()
         return self.make_api_request(
             'listEventTypes',
             utils.get_kwargs(locals()),
@@ -147,7 +147,7 @@ class Betfair(object):
         :param MarketFilter filter:
         :param str locale:
         """
-        filter = filter or None
+        filter = filter or models.MarketFilter()
         return self.make_api_request(
             'listCompetitions',
             utils.get_kwargs(locals()),
@@ -161,7 +161,7 @@ class Betfair(object):
         :param TimeGranularity granularity:
         :param MarketFilter filter:
         """
-        filter = filter or {}
+        filter = filter or models.MarketFilter()
         return self.make_api_request(
             'listTimeRanges',
             utils.get_kwargs(locals()),
@@ -175,7 +175,7 @@ class Betfair(object):
         :param MarketFilter filter:
         :param str locale:
         """
-        filter = filter or None
+        filter = filter or models.MarketFilter()
         return self.make_api_request(
             'listEvents',
             utils.get_kwargs(locals()),
@@ -189,7 +189,7 @@ class Betfair(object):
         :param MarketFilter filter:
         :param str locale:
         """
-        filter = filter or None
+        filter = filter or models.MarketFilter()
         return self.make_api_request(
             'listMarketTypes',
             utils.get_kwargs(locals()),
@@ -203,7 +203,7 @@ class Betfair(object):
         :param MarketFilter filter:
         :param str locale:
         """
-        filter = filter or None
+        filter = filter or models.MarketFilter()
         return self.make_api_request(
             'listCountries',
             utils.get_kwargs(locals()),
@@ -217,7 +217,7 @@ class Betfair(object):
         :param MarketFilter filter:
         :param str locale:
         """
-        filter = filter or None
+        filter = filter or models.MarketFilter()
         return self.make_api_request(
             'listCountries',
             utils.get_kwargs(locals()),
@@ -236,7 +236,7 @@ class Betfair(object):
         :param MarketSort sort:
         :param str locale:
         """
-        filter = filter or None
+        filter = filter or models.MarketFilter()
         return self.make_api_request(
             'listMarketCatalogue',
             utils.get_kwargs(locals()),
