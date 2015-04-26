@@ -23,7 +23,6 @@ class Betfair(object):
     :param str cert_file: Path to self-signed SSL certificate file(s); may be
         a *.pem file or a tuple of (*.crt, *.key) files
     :param str content_type: Response type
-
     """
     def __init__(self, app_key, cert_file, content_type='application/json'):
         self.app_key = app_key
@@ -70,7 +69,6 @@ class Betfair(object):
         :param str username: Username
         :param str password: Password
         :raises: BetfairLoginError
-
         """
         response = self.session.post(
             os.path.join(IDENTITY_URL, 'certlogin'),
@@ -95,7 +93,6 @@ class Betfair(object):
         """Reset session timeout.
 
         :raises: BetfairAuthError
-
         """
         self.make_auth_request('keepAlive')
 
@@ -104,7 +101,6 @@ class Betfair(object):
         """Log out and clear `session_token`.
 
         :raises: BetfairAuthError
-
         """
         self.make_auth_request('logout')
         self.session_token = None
@@ -117,7 +113,6 @@ class Betfair(object):
 
         :param MarketFilter filter:
         :param str locale:
-
         """
         return self.make_api_request(
             'listEventTypes',
@@ -131,7 +126,6 @@ class Betfair(object):
 
         :param MarketFilter filter:
         :param str locale:
-
         """
         return self.make_api_request(
             'listCompetitions',
@@ -145,7 +139,6 @@ class Betfair(object):
 
         :param MarketFilter filter:
         :param TimeGranularity granularity:
-
         """
         return self.make_api_request(
             'listTimeRanges',
@@ -159,7 +152,6 @@ class Betfair(object):
 
         :param MarketFilter filter:
         :param str locale:
-
         """
         return self.make_api_request(
             'listEvents',
@@ -173,7 +165,6 @@ class Betfair(object):
 
         :param MarketFilter filter:
         :param str locale:
-
         """
         return self.make_api_request(
             'listMarketTypes',
@@ -187,7 +178,6 @@ class Betfair(object):
 
         :param MarketFilter filter:
         :param str locale:
-
         """
         return self.make_api_request(
             'listCountries',
@@ -201,7 +191,6 @@ class Betfair(object):
 
         :param MarketFilter filter:
         :param str locale:
-
         """
         return self.make_api_request(
             'listCountries',
@@ -220,7 +209,6 @@ class Betfair(object):
         :param list market_projection:
         :param MarketSort sort:
         :param str locale:
-
         """
         return self.make_api_request(
             'listMarketCatalogue',
@@ -240,7 +228,6 @@ class Betfair(object):
         :param MatchProjection match_projection:
         :param str currency_code:
         :param str locale:
-
         """
         return self.make_api_request(
             'listMarketBook',
@@ -260,7 +247,6 @@ class Betfair(object):
         :param bool net_of_commission: Option to return profit and loss net of
             users current commission rate for this market including any special
             tariffs
-
         """
         return self.make_api_request(
             'listMarketProfitAndLoss',
@@ -276,7 +262,6 @@ class Betfair(object):
         :param list market_ids: List of market IDs
         :param int chunk_size: Number of records per chunk
         :param dict kwargs: Arguments passed to `list_market_book`
-
         """
         return itertools.chain(*(
             self.list_market_book(market_chunk, **kwargs)
@@ -290,7 +275,6 @@ class Betfair(object):
         :param list market_ids: List of market IDs
         :param int chunk_size: Number of records per chunk
         :param dict kwargs: Arguments passed to `list_market_profit_and_loss`
-
         """
         return itertools.chain(*(
             self.list_market_profit_and_loss(market_chunk, **kwargs)
@@ -313,7 +297,6 @@ class Betfair(object):
         :param sort_dir:
         :param from_record:
         :param record_count:
-
         """
         return self.make_api_request(
             'listCurrentOrders',
@@ -341,7 +324,6 @@ class Betfair(object):
         :param locale:
         :param from_record:
         :param record_count:
-
         """
         return self.make_api_request(
             'listClearedOrders',
@@ -357,7 +339,6 @@ class Betfair(object):
         :param str market_id: The market id these orders are to be placed on
         :param list instructions: List of `PlaceInstruction` objects
         :param str customer_ref: Optional order identifier string
-
         """
         return self.make_api_request(
             'placeOrders',
@@ -373,7 +354,6 @@ class Betfair(object):
         :param str market_id: If not supplied all bets are cancelled
         :param list instructions: List of `CancelInstruction` objects
         :param str customer_ref: Optional order identifier string
-
         """
         return self.make_api_request(
             'cancelOrders',
@@ -389,7 +369,6 @@ class Betfair(object):
         :param str market_id: The market id these orders are to be placed on
         :param list instructions: List of `ReplaceInstruction` objects
         :param str customer_ref: Optional order identifier string
-
         """
         return self.make_api_request(
             'replaceOrders',
@@ -411,4 +390,3 @@ class Betfair(object):
             utils.get_kwargs(locals()),
             model=models.UpdateExecutionReport,
         )
-

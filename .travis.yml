@@ -1,5 +1,7 @@
 language: python
 
+sudo: false
+
 python:
   - "2.7"
   - "3.3"
@@ -9,5 +11,8 @@ python:
 install:
   - travis_retry python setup.py install
   - travis_retry pip install -U -r dev-requirements.txt
+
+before_script:
+  - flake8 betfair
 
 script: python setup.py test

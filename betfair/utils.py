@@ -17,7 +17,7 @@ def get_chunks(sequence, chunk_size):
 
     """
     return [
-        sequence[idx:idx+chunk_size]
+        sequence[idx:idx + chunk_size]
         for idx in range(0, len(sequence), chunk_size)
     ]
 
