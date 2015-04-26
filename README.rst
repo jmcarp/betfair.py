@@ -34,15 +34,19 @@ simplifying this process. To create a self-signed certificate, run ::
 
     invoke ssl
 
-This will generate a file named ``betfair.pem`` in the ``certs`` directory.
+This will generate the following files in the ``certs`` directory ::
+
+    betfair.crt
+    betfair.csr
+    betfair.key
+    betfair.pem
+
 You can write SSL certificates to another directory by passing the
 ``--name`` parameter ::
 
     invoke ssl --name=path/to/certs/ssl
 
-This will generate a file named ``ssl.pem`` in the ``path/to/certs/``
-directory. Once you have generated the SSL certificate, you can upload the
-.pem file to Betfair at https://myaccount.betfair.com/accountdetails/mysecurity?showAPI=1.
+Once you have generated the files, you can upload the ``.crt`` file to Betfair at https://myaccount.betfair.com/accountdetails/mysecurity?showAPI=1.
 
 Examples
 --------
