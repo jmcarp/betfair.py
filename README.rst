@@ -44,9 +44,10 @@ This will generate the following files in the ``certs`` directory ::
 You can write SSL certificates to another directory by passing the
 ``--name`` parameter ::
 
-    invoke ssl --name=path/to/certs/ssl
+    invoke ssl --name=path/to/certs/betfair
 
-Once you have generated the files, you can upload the ``.crt`` file to Betfair at https://myaccount.betfair.com/accountdetails/mysecurity?showAPI=1.
+Once you have generated the files, you can upload the ``betfair.pem`` file to
+Betfair at https://myaccount.betfair.com/accountdetails/mysecurity?showAPI=1.
 
 Examples
 --------
