@@ -57,8 +57,6 @@ class Betfair(object):
             'X-Authentication': self.session_token,
             'Content-Type': self.content_type,
             'Accept': 'application/json',
-            'Connection': 'keep-alive',
-            'Accept-Encoding': 'gzip, deflate'
         }
 
     def make_auth_request(self, method):
