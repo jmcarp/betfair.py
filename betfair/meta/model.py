@@ -2,6 +2,7 @@
 
 import six
 import copy
+import logging
 
 from .field import Field
 
@@ -31,8 +32,9 @@ class Model(object):
         for key, value in six.iteritems(kwargs):
             key = self.unserialize_key(key)
             if key not in self._fields:
-                raise ValueError('Key {0} not in model schema'.format(key))
-            self._fields[key].__set__(self, value, safe=True)
+                logging.warning('Key {0} not in model schema'.format(key))
+            else:
+                self._fields[key].__set__(self, value, safe=True)
         self.check_complete()
 
     def check_complete(self):
