@@ -7,6 +7,9 @@ import logging
 from .field import Field
 
 
+logger = logging.getLogger(__name__)
+
+
 class Model(object):
     """Model base class. Subclasses should define `Field` descriptors, which
     are collected in `_fields`. Note: to avoid circular definitions, the
@@ -32,7 +35,7 @@ class Model(object):
         for key, value in six.iteritems(kwargs):
             key = self.unserialize_key(key)
             if key not in self._fields:
-                logging.warning('Key {0} not in model schema'.format(key))
+                logger.warn('Key {0} not in model schema'.format(key))
             else:
                 self._fields[key].__set__(self, value, safe=True)
         self.check_complete()
