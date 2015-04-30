@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import division
+
 from decimal import Decimal, ROUND_HALF_UP
 
 
