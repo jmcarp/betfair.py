@@ -25,11 +25,6 @@ class BetfairModel(object):
     def __init__(self, **kwargs):
         self.unserialize(kwargs)
 
-    def serialize_key(self, key):
-        return inflection.camelize(
-            key, uppercase_first_letter=False
-        ).rstrip('_')
-
     def unserialize_key(self, key):
         key = inflection.underscore(key)
         if key in self._fields:
@@ -38,13 +33,12 @@ class BetfairModel(object):
 
     def serialize(self):
         return {
-            self.serialize_key(key): value.serialize(self)
+            key: value.serialize(self)
             for key, value in six.iteritems(self._fields)
         }
 
     def unserialize(self, kwargs):
         for key, value in six.iteritems(kwargs):
-            key = self.unserialize_key(key)
             if key not in self._fields:
                 logger.warn('Key {0} not in model schema'.format(key))
             else:
@@ -87,8 +81,14 @@ class ModelMeta(type):
     """
     def __init__(cls, name, bases, dct):
         cls._fields = copy_fields(bases)
+
+        def serialize_key(key):
+            return inflection.camelize(
+                key, uppercase_first_letter=False
+            ).rstrip('_')
+
         cls._fields.update({
-            key: value
+            serialize_key(key): value
             for key, value in six.iteritems(dct)
             if isinstance(value, Field)
         })
