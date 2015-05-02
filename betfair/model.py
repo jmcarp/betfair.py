@@ -25,12 +25,6 @@ class BetfairModel(object):
     def __init__(self, **kwargs):
         self.unserialize(kwargs)
 
-    def unserialize_key(self, key):
-        key = inflection.underscore(key)
-        if key in self._fields:
-            return key
-        return key + '_'
-
     def serialize(self):
         return {
             key: value.serialize(self)
@@ -40,7 +34,7 @@ class BetfairModel(object):
     def unserialize(self, kwargs):
         for key, value in six.iteritems(kwargs):
             if key not in self._fields:
-                logger.warn('Key {0} not in model schema'.format(key))
+                logger.warn('No field for {0} in model schema'.format(key))
             else:
                 self._fields[key].__set__(self, value, safe=True)
         self.check_complete()
