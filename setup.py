@@ -15,6 +15,7 @@ INSTALL_REQUIRES = [
     'decorator>=3.4.2',
     'inflection>=0.3.0',
     'python-dateutil>=2.4.2',
+    'simplejson==3.6.5',
 ]
 TEST_REQUIRES = [
     'pytest',
