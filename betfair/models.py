@@ -138,7 +138,7 @@ class Match(BetfairModel):
 
 
 class Runner(BetfairModel):
-    selection_id = Field(DataType(float), required=True)
+    selection_id = Field(DataType(int), required=True)
     handicap = Field(DataType(float), required=True)
     status = Field(EnumType(constants.RunnerStatus), required=True)
     adjustment_factor = Field(DataType(float))
