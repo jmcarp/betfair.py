@@ -259,7 +259,7 @@ class VenueResult(BetfairModel):
 
 class PlaceInstruction(BetfairModel):
     order_type = Field(EnumType(constants.OrderType), required=True)
-    selection_id = Field(DataType(float), required=True)
+    selection_id = Field(DataType(int), required=True)
     handicap = Field(DataType(float))
     side = Field(EnumType(constants.Side), required=True)
     limit_order = Field(ModelType(LimitOrder))
