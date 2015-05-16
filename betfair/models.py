@@ -172,7 +172,7 @@ class MarketBook(BetfairModel):
 
 
 class RunnerProfitAndLoss(BetfairModel):
-    selection_id = Field(DataType(float))
+    selection_id = Field(DataType(int))
     if_win = Field(DataType(float))
     if_lose = Field(DataType(float))
 
