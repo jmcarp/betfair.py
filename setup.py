@@ -76,7 +76,6 @@ setup(
     package_dir={'betfair': 'betfair'},
     include_package_data=True,
     install_requires=INSTALL_REQUIRES,
-    license=read('LICENSE'),
     zip_safe=False,
     classifiers=[
         'Development Status :: 4 - Beta',
