@@ -287,7 +287,7 @@ class UpdateInstruction(BetfairModel):
 class CurrentOrderSummary(BetfairModel):
     bet_id = Field(DataType(six.text_type), required=True)
     market_id = Field(DataType(six.text_type), required=True)
-    selection_id = Field(DataType(float), required=True)
+    selection_id = Field(DataType(int), required=True)
     handicap = Field(DataType(float), required=True)
     price_size = Field(DataType(PriceSize), required=True)
     bsp_liability = Field(DataType(float), required=True)
