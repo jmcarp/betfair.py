@@ -325,7 +325,7 @@ class ClearedOrderSummary(BetfairModel):
     event_type_id = Field(DataType(six.text_type))
     event_id = Field(DataType(six.text_type))
     market_id = Field(DataType(six.text_type))
-    selection_id = Field(DataType(float))
+    selection_id = Field(DataType(int))
     handicap = Field(DataType(float))
     bet_id = Field(DataType(six.text_type))
     placed_data = Field(datetime_type)
