@@ -39,7 +39,7 @@ class MarketDescription(BetfairModel):
 
 
 class RunnerCatalog(BetfairModel):
-    selection_id = Field(DataType(float), required=True)
+    selection_id = Field(DataType(int), required=True)
     runner_name = Field(DataType(six.text_type), required=True)
     handicap = Field(DataType(float), required=True)
     sort_priority = Field(DataType(int), required=True)
