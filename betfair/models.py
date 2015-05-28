@@ -39,7 +39,7 @@ class MarketDescription(BetfairModel):
 
 
 class RunnerCatalog(BetfairModel):
-    selection_id = Field(DataType(float), required=True)
+    selection_id = Field(DataType(int), required=True)
     runner_name = Field(DataType(six.text_type), required=True)
     handicap = Field(DataType(float), required=True)
     sort_priority = Field(DataType(int), required=True)
@@ -138,7 +138,7 @@ class Match(BetfairModel):
 
 
 class Runner(BetfairModel):
-    selection_id = Field(DataType(float), required=True)
+    selection_id = Field(DataType(int), required=True)
     handicap = Field(DataType(float), required=True)
     status = Field(EnumType(constants.RunnerStatus), required=True)
     adjustment_factor = Field(DataType(float))
@@ -172,7 +172,7 @@ class MarketBook(BetfairModel):
 
 
 class RunnerProfitAndLoss(BetfairModel):
-    selection_id = Field(DataType(float))
+    selection_id = Field(DataType(int))
     if_win = Field(DataType(float))
     if_lose = Field(DataType(float))
 
@@ -259,7 +259,7 @@ class VenueResult(BetfairModel):
 
 class PlaceInstruction(BetfairModel):
     order_type = Field(EnumType(constants.OrderType), required=True)
-    selection_id = Field(DataType(float), required=True)
+    selection_id = Field(DataType(int), required=True)
     handicap = Field(DataType(float))
     side = Field(EnumType(constants.Side), required=True)
     limit_order = Field(ModelType(LimitOrder))
@@ -287,7 +287,7 @@ class UpdateInstruction(BetfairModel):
 class CurrentOrderSummary(BetfairModel):
     bet_id = Field(DataType(six.text_type), required=True)
     market_id = Field(DataType(six.text_type), required=True)
-    selection_id = Field(DataType(float), required=True)
+    selection_id = Field(DataType(int), required=True)
     handicap = Field(DataType(float), required=True)
     price_size = Field(DataType(PriceSize), required=True)
     bsp_liability = Field(DataType(float), required=True)
@@ -325,7 +325,7 @@ class ClearedOrderSummary(BetfairModel):
     event_type_id = Field(DataType(six.text_type))
     event_id = Field(DataType(six.text_type))
     market_id = Field(DataType(six.text_type))
-    selection_id = Field(DataType(float))
+    selection_id = Field(DataType(int))
     handicap = Field(DataType(float))
     bet_id = Field(DataType(six.text_type))
     placed_data = Field(datetime_type)
