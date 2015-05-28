@@ -33,13 +33,15 @@ class Betfair(object):
         a *.pem file or a tuple of (*.crt, *.key) files
     :param str content_type: Optional content type
     :param str locale: Optional location ("australia", "italy", etc.)
+    :param Session session: Optional Requests session
     """
-    def __init__(self, app_key, cert_file, content_type='application/json', locale=None):
+    def __init__(self, app_key, cert_file, content_type='application/json', locale=None,
+                 session=None):
         self.app_key = app_key
         self.cert_file = cert_file
         self.content_type = content_type
         self.locale = locale
-        self.session = requests.Session()
+        self.session = session or requests.Session()
         self.session_token = None
 
     @property
