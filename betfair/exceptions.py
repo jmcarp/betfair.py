@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import bf_logging
+from . import bf_logging
 
 class BetfairError(Exception):
     def __init__(self, message):
