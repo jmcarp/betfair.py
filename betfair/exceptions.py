@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
-
+from . import bf_logging
 
 class BetfairError(Exception):
+    def __init__(self, message):
+        bf_logging.main_logger.exception(message)
+        # pass
     pass
 
 
