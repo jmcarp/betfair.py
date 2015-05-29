@@ -10,6 +10,7 @@ from six.moves import urllib_parse as urllib
 from . import utils
 from . import models
 from . import exceptions
+from . import bf_logging
 
 
 IDENTITY_URL = 'https://identitysso.betfair.com/api/'
@@ -50,6 +51,7 @@ class Betfair(object):
         data = response.json()
         if data.get('status') != 'SUCCESS':
             raise exceptions.BetfairAuthError(response, data)
+        bf_logging.main_logger.info('{0} {1}'.format(method, data.get('status')))
 
     def make_api_request(self, method, params, codes=None, model=None):
         payload = utils.make_payload(method, params)
@@ -60,6 +62,7 @@ class Betfair(object):
         )
         utils.check_status_code(response, codes=codes)
         result = utils.result_or_error(response)
+        bf_logging.main_logger.debug('{0} {1}'.format(method, result))
         return utils.process_result(result, model)
 
     # Authentication methods
@@ -89,6 +92,7 @@ class Betfair(object):
         if data.get('loginStatus') != 'SUCCESS':
             raise exceptions.BetfairLoginError(response, data)
         self.session_token = data['sessionToken']
+        bf_logging.main_logger.info('login successful')
 
     @utils.requires_login
     def keep_alive(self):
