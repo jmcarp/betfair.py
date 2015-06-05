@@ -123,4 +123,4 @@ def requires_login(func, *args, **kwargs):
     self = args[0]
     if self.session_token:
         return func(*args, **kwargs)
-    raise exceptions.BetfairError('Not logged in')
+    raise exceptions.NotLoggedIn('Not logged in')
