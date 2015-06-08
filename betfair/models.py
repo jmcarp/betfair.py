@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import absolute_import
+
 from schematics.types import IntType
 from schematics.types import FloatType
 from schematics.types import StringType
