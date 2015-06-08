@@ -9,9 +9,9 @@ import requests
 from six.moves import http_client as httplib
 from six.moves import urllib_parse as urllib
 
-from . import utils
-from . import models
-from . import exceptions
+from betfair import utils
+from betfair import models
+from betfair import exceptions
 
 
 IDENTITY_URLS = collections.defaultdict(

@@ -1,5 +1,4 @@
-from .datatype import DataType
-from .field import Field, ListField
-from .model import Model
+from .types import EnumType
+from .models import BetfairModel
 
-__all__ = ['DataType', 'Field', 'ListField', 'Model']
+__all__ = ['EnumType', 'BetfairModel']

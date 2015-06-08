@@ -50,4 +50,3 @@ def ssl(name=DEFAULT_NAME, bits=DEFAULT_BITS):
     generate_cert(name)
     sign_cert(name)
     generate_pem(name)
-

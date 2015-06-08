@@ -6,7 +6,8 @@ import inflection
 import collections
 from six.moves import http_client as httplib
 
-from . import exceptions
+from betfair import exceptions
+from betfair.meta.models import BetfairModel
 
 
 def get_chunks(sequence, chunk_size):
@@ -93,7 +94,9 @@ def serialize_params(params):
         key = inflection.camelize(
             key, uppercase_first_letter=False
         ).rstrip('_')
-        value = value.serialize() if hasattr(value, 'serialize') else value
+        if isinstance(value, BetfairModel):
+            value.validate()
+            value = value.serialize()
         out[key] = value
     return out
 

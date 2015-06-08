@@ -3,6 +3,7 @@
 import pytest
 from betfair.price import nearest_price, price_ticks_away, ticks_difference
 
+
 @pytest.mark.parametrize(('price', 'expected'), [
     (0.1, 1.01), (1, 1.01), (1000.1, 1000), (2000, 1000.0), (1.01, 1.01), (2.02, 2.02),
     (3.05, 3.05), (4.1, 4.1), (6.2, 6.2), (10.5, 10.5), (21, 21), (32, 32), (55, 55),
