@@ -2,21 +2,40 @@
 
 import pytest
 
+from enum import Enum
 from schematics.types import StringType
 
+from betfair.meta.types import EnumType
 from betfair.meta.models import BetfairModel
 
 
-@pytest.fixture
-def model():
-    class TestModel(BetfairModel):
+def test_field_inflection():
+    class FakeModel(BetfairModel):
         underscore_separated_field = StringType()
-    return TestModel
 
-
-def test_field_inflection(model):
-    record = model(underscoreSeparatedField='test')
+    record = FakeModel(underscoreSeparatedField='test')
     assert record.underscore_separated_field == 'test'
     serialized = record.serialize()
     assert 'underscoreSeparatedField' in serialized
     assert serialized['underscoreSeparatedField'] == 'test'
+
+
+FakeEnum = Enum(
+    'TestEnum', [
+        'val1',
+        'val2',
+    ]
+)
+
+@pytest.mark.parametrize(['input', 'expected'], [
+    ('val1', 'val1'),
+    (FakeEnum.val1, 'val1'),
+])
+def test_enum_type(input, expected):
+    class FakeModel(BetfairModel):
+        enum_field = EnumType(FakeEnum)
+
+    datum = FakeModel(enum_field=input)
+    datum.validate()
+    serialized = datum.serialize()
+    assert serialized['enumField'] == expected

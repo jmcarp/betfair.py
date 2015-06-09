@@ -17,7 +17,7 @@ class EnumType(BaseType):
         if isinstance(value, self.enum):
             return value.name
         try:
-            self.enum[value]
+            return self.enum[value].name
         except KeyError:
             message = self.messages['choices'].format(self.enum.__name__)
             raise error(message)
