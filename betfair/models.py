@@ -193,8 +193,8 @@ class ExBestOffersOverrides(BetfairModel):
 
 class PriceProjection(BetfairModel):
     price_data = ListField(EnumType(constants.PriceData))
-    ex_best_offer_overrides = Field(ModelType(ExBestOffersOverrides))
-    virtualize = Field(DataType(bool))
+    ex_best_offers_overrides = Field(ModelType(ExBestOffersOverrides))
+    virtualise = Field(DataType(bool))
     rollover_stakes = Field(DataType(bool))
 
 
@@ -296,7 +296,7 @@ class CurrentOrderSummary(BetfairModel):
     persistence_type = Field(EnumType(constants.PersistenceType), required=True)
     order_type = Field(EnumType(constants.OrderType), required=True)
     placed_date = Field(datetime_type, required=True)
-    matched_date = Field(datetime_type, required=True)
+    matched_date = Field(datetime_type)
     average_price_matched = Field(DataType(float))
     size_matched = Field(DataType(float))
     size_remaining = Field(DataType(float))
@@ -328,7 +328,7 @@ class ClearedOrderSummary(BetfairModel):
     selection_id = Field(DataType(int))
     handicap = Field(DataType(float))
     bet_id = Field(DataType(six.text_type))
-    placed_data = Field(datetime_type)
+    placed_date = Field(datetime_type)
     persistence_type = Field(EnumType(constants.PersistenceType))
     order_type = Field(EnumType(constants.OrderType))
     side = Field(EnumType(constants.Side))
@@ -345,7 +345,7 @@ class ClearedOrderSummary(BetfairModel):
 
 
 class ClearedOrderSummaryReport(BetfairModel):
-    current_orders = ListField(ModelType(ClearedOrderSummary), required=True)
+    cleared_orders = ListField(ModelType(ClearedOrderSummary), required=True)
     more_available = Field(DataType(bool), required=True)
 
 
