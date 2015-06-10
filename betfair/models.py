@@ -199,8 +199,8 @@ class ExBestOffersOverrides(BetfairModel):
 
 class PriceProjection(BetfairModel):
     price_data = ListType(EnumType(constants.PriceData))
-    ex_best_offer_overrides = ModelType(ExBestOffersOverrides)
-    virtualize = BooleanType()
+    ex_best_offers_overrides = ModelType(ExBestOffersOverrides)
+    virtualise = BooleanType()
     rollover_stakes = BooleanType()
 
 
@@ -302,7 +302,7 @@ class CurrentOrderSummary(BetfairModel):
     persistence_type = EnumType(constants.PersistenceType, required=True)
     order_type = EnumType(constants.OrderType, required=True)
     placed_date = DateTimeType(required=True)
-    matched_date = DateTimeType(required=True)
+    matched_date = DateTimeType()
     average_price_matched = FloatType()
     size_matched = FloatType()
     size_remaining = FloatType()
@@ -334,7 +334,7 @@ class ClearedOrderSummary(BetfairModel):
     selection_id = IntType()
     handicap = FloatType()
     bet_id = StringType()
-    placed_data = DateTimeType()
+    placed_date = DateTimeType()
     persistence_type = EnumType(constants.PersistenceType)
     order_type = EnumType(constants.OrderType)
     side = EnumType(constants.Side)
@@ -351,7 +351,7 @@ class ClearedOrderSummary(BetfairModel):
 
 
 class ClearedOrderSummaryReport(BetfairModel):
-    current_orders = ListType(ModelType(ClearedOrderSummary), required=True)
+    cleared_orders = ListType(ModelType(ClearedOrderSummary), required=True)
     more_available = BooleanType(required=True)
 
 
