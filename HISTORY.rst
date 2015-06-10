@@ -3,6 +3,15 @@
 History
 -------
 
+0.2.0
+++++++++++++++++++
+* Replace homegrown models with Schematics.
+* Use custom JSON encoder to handle JSON-unsafe types. Thanks kwassmuss for the patch.
+* Fix typos in models and constants. Thanks kwassmuss and petedmarsh.
+* Fix pip install. Thanks petedmarsh.
+* Add various helpers for working with Betfair prices. Thanks petedmarsh.
+* Add `NotLoggedIn` exception. Thanks ms5.
+
 0.1.4
 ++++++++++++++++++
 * Various fixes to `README.rst`. Thanks dmitryTsatsarin, skolsuper, goetzk, and petedmarsh.
