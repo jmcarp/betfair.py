@@ -316,8 +316,9 @@ class Betfair(object):
 
     @utils.requires_login
     def list_current_orders(
-            self, bet_ids, market_ids, order_projection, date_range, order_by,
-            sort_dir, from_record, record_count):
+            self, bet_ids=None, market_ids=None, order_projection=None,
+            date_range=None, order_by=None, sort_dir=None, from_record=None,
+            record_count=None):
         """
 
         :param bet_ids:

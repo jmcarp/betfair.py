@@ -90,6 +90,7 @@ class BetfairEncoder(json.JSONEncoder):
         if isinstance(o, datetime.datetime):
             return o.isoformat()
         if isinstance(o, BetfairModel):
+            o.validate()
             return o.serialize()
         if isinstance(o, enum.Enum):
             return o.name
