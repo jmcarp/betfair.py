@@ -77,7 +77,7 @@ class Betfair(object):
         payload = utils.make_payload(method, params)
         response = self.session.post(
             self.api_url,
-            data=json.dumps(payload),
+            data=json.dumps(payload, cls=utils.BetfairEncoder),
             headers=self.headers,
         )
         utils.check_status_code(response, codes=codes)

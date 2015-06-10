@@ -3,12 +3,16 @@
 from __future__ import absolute_import
 
 import six
-import decorator
-import inflection
+import json
+import datetime
 import collections
+
+import enum
+import decorator
 from six.moves import http_client as httplib
 
 from betfair import exceptions
+from betfair.meta import utils
 from betfair.meta.models import BetfairModel
 
 
@@ -17,7 +21,6 @@ def get_chunks(sequence, chunk_size):
 
     :param list sequence:
     :param int chunk_size:
-
     """
     return [
         sequence[idx:idx + chunk_size]
@@ -29,7 +32,6 @@ def get_kwargs(kwargs):
     """Get all keys and values from dictionary where key is not `self`.
 
     :param dict kwargs: Input parameters
-
     """
     return {
         key: value for key, value in six.iteritems(kwargs)
@@ -43,7 +45,6 @@ def check_status_code(response, codes=None):
     :param Response response: HTTP response
     :param codes: List of accepted codes or callable
     :raises: ApiError if code invalid
-
     """
     codes = codes or [httplib.OK]
     checker = (
@@ -60,14 +61,13 @@ def result_or_error(response):
     found.
 
     :param Response response:
-    :raises: BetfairAPIError if no results passed
-
+    :raises: ApiError if no results passed
     """
     data = response.json()
     result = data.get('result')
     if result is not None:
         return result
-    raise exceptions.BetfairAPIError(response, data)
+    raise exceptions.ApiError(response, data)
 
 
 def process_result(result, model=None):
@@ -84,21 +84,16 @@ def process_result(result, model=None):
     return model(**result)
 
 
-def serialize_params(params):
-    """Serialize input parameters to Betfair-formatted JSON.
+class BetfairEncoder(json.JSONEncoder):
 
-    :param dict params: Request parameters
-    """
-    out = {}
-    for key, value in six.iteritems(params):
-        key = inflection.camelize(
-            key, uppercase_first_letter=False
-        ).rstrip('_')
-        if isinstance(value, BetfairModel):
-            value.validate()
-            value = value.serialize()
-        out[key] = value
-    return out
+    def default(self, o):
+        if isinstance(o, datetime.datetime):
+            return o.isoformat()
+        if isinstance(o, BetfairModel):
+            return o.serialize()
+        if isinstance(o, enum.Enum):
+            return o.name
+        return super(BetfairEncoder, self).default(o)
 
 
 def make_payload(method, params):
@@ -110,7 +105,7 @@ def make_payload(method, params):
     payload = {
         'jsonrpc': '2.0',
         'method': 'SportsAPING/v1.0/{0}'.format(method),
-        'params': serialize_params(params),
+        'params': utils.serialize_dict(params),
         'id': 1,
     }
     return payload
