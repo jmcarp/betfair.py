@@ -33,3 +33,10 @@ class BetfairAPIError(BetfairError):
             self.message = 'UNKNOWN'
             self.details = None
         super(BetfairAPIError, self).__init__(self.message)
+
+
+class NotLoggedIn(BetfairError):
+    """
+    exception raised if the user is not logged in
+    """
+    pass
