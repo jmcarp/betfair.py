@@ -25,6 +25,12 @@ To run tests ::
 
     $ py.test
 
+Application Keys
+----------------
+
+You will need an Application Key to log in to the Betfair API. You can find
+instructions for creating a key at https://api.developer.betfair.com/services/webapps/docs/display/1smk3cen4v3lu3yomq5qye0ni/Application+Keys
+
 SSL Certificates
 ----------------
 
