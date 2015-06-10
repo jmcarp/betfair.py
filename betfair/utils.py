@@ -42,7 +42,7 @@ def check_status_code(response, codes=None):
 
     :param Response response: HTTP response
     :param codes: List of accepted codes or callable
-    :raises: BetfairError if code invalid
+    :raises: ApiError if code invalid
 
     """
     codes = codes or [httplib.OK]
@@ -52,7 +52,7 @@ def check_status_code(response, codes=None):
         else lambda resp: resp.status_code in codes
     )
     if not checker(response):
-        raise exceptions.BetfairError(response)
+        raise exceptions.ApiError(response)
 
 
 def result_or_error(response):
@@ -124,4 +124,4 @@ def requires_login(func, *args, **kwargs):
     self = args[0]
     if self.session_token:
         return func(*args, **kwargs)
-    raise exceptions.NotLoggedIn('Not logged in')
+    raise exceptions.NotLoggedIn()

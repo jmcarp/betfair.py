@@ -63,7 +63,7 @@ def test_login_success(client, login_success):
 
 
 def test_login_error(client, login_failure):
-    with pytest.raises(exceptions.BetfairLoginError) as excinfo:
+    with pytest.raises(exceptions.LoginError) as excinfo:
         client.login('name', 'wrong')
     error = excinfo.value
     assert error.message == 'INVALID_USERNAME_OR_PASSWORD'
@@ -74,7 +74,7 @@ def test_keepalive_success(logged_in_client, keepalive_success):
 
 
 def test_keepalive_failure(logged_in_client, keepalive_failure):
-    with pytest.raises(exceptions.BetfairAuthError) as excinfo:
+    with pytest.raises(exceptions.AuthError) as excinfo:
         logged_in_client.keep_alive()
     error = excinfo.value
     assert error.message == 'NO_SESSION'
@@ -86,7 +86,7 @@ def test_logout_success(logged_in_client, logout_success):
 
 
 def test_logout_failure(logged_in_client, logout_failure):
-    with pytest.raises(exceptions.BetfairAuthError) as excinfo:
+    with pytest.raises(exceptions.AuthError) as excinfo:
         logged_in_client.logout()
     error = excinfo.value
     assert error.message == 'NO_SESSION'

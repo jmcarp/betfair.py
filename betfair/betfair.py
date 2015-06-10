@@ -71,7 +71,7 @@ class Betfair(object):
         utils.check_status_code(response)
         data = response.json()
         if data.get('status') != 'SUCCESS':
-            raise exceptions.BetfairAuthError(response, data)
+            raise exceptions.AuthError(response, data)
 
     def make_api_request(self, method, params, codes=None, model=None):
         payload = utils.make_payload(method, params)
@@ -108,14 +108,14 @@ class Betfair(object):
         utils.check_status_code(response, [httplib.OK])
         data = response.json()
         if data.get('loginStatus') != 'SUCCESS':
-            raise exceptions.BetfairLoginError(response, data)
+            raise exceptions.LoginError(response, data)
         self.session_token = data['sessionToken']
 
     @utils.requires_login
     def keep_alive(self):
         """Reset session timeout.
 
-        :raises: BetfairAuthError
+        :raises: AuthError
         """
         self.make_auth_request('keepAlive')
 
@@ -123,7 +123,7 @@ class Betfair(object):
     def logout(self):
         """Log out and clear `session_token`.
 
-        :raises: BetfairAuthError
+        :raises: AuthError
         """
         self.make_auth_request('logout')
         self.session_token = None

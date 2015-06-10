@@ -5,23 +5,27 @@ class BetfairError(Exception):
     pass
 
 
-class BetfairLoginError(BetfairError):
+class NotLoggedIn(BetfairError):
+    pass
+
+
+class LoginError(BetfairError):
 
     def __init__(self, response, data):
         self.response = response
         self.message = data.get('loginStatus', 'UNKNOWN')
-        super(BetfairLoginError, self).__init__(self.message)
+        super(LoginError, self).__init__(self.message)
 
 
-class BetfairAuthError(BetfairError):
+class AuthError(BetfairError):
 
     def __init__(self, response, data):
         self.response = response
         self.message = data.get('error', 'UNKNOWN')
-        super(BetfairAuthError, self).__init__(self.message)
+        super(AuthError, self).__init__(self.message)
 
 
-class BetfairAPIError(BetfairError):
+class ApiError(BetfairError):
 
     def __init__(self, response, data):
         self.response = response
@@ -32,11 +36,4 @@ class BetfairAPIError(BetfairError):
         except KeyError:
             self.message = 'UNKNOWN'
             self.details = None
-        super(BetfairAPIError, self).__init__(self.message)
-
-
-class NotLoggedIn(BetfairError):
-    """
-    exception raised if the user is not logged in
-    """
-    pass
+        super(ApiError, self).__init__(self.message)
