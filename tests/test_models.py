@@ -6,6 +6,7 @@ from enum import Enum
 from schematics.types import StringType
 
 from betfair.meta.types import EnumType
+from betfair.meta.types import ModelType
 from betfair.meta.models import BetfairModel
 
 
@@ -39,3 +40,21 @@ def test_enum_type(input, expected):
     datum.validate()
     serialized = datum.serialize()
     assert serialized['enumField'] == expected
+
+
+def test_nested_model():
+    class Child(BetfairModel):
+        child_name = StringType()
+
+    class Parent(BetfairModel):
+        parent_name = StringType()
+        child = ModelType(Child)
+
+    parent = Parent(parent_name='mom', child=dict(child_name='kid'))
+    expected = {
+        'parentName': 'mom',
+        'child': {
+            'childName': 'kid',
+        },
+    }
+    assert parent.serialize() == expected
