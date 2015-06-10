@@ -76,7 +76,6 @@ def process_result(result, model=None):
     :param result: Betfair response JSON
     :param BetfairModel model: Deserialization format; if `None`, return raw
         JSON
-
     """
     if model is None:
         return result
@@ -89,7 +88,6 @@ def serialize_params(params):
     """Serialize input parameters to Betfair-formatted JSON.
 
     :param dict params: Request parameters
-
     """
     out = {}
     for key, value in six.iteritems(params):
@@ -108,7 +106,6 @@ def make_payload(method, params):
 
     :param str method: Betfair endpoint
     :param dict params: Request parameters
-
     """
     payload = {
         'jsonrpc': '2.0',
@@ -123,7 +120,6 @@ def make_payload(method, params):
 def requires_login(func, *args, **kwargs):
     """Decorator to check that the user is logged in. Raises `BetfairError`
     if instance variable `session_token` is absent.
-
     """
     self = args[0]
     if self.session_token:

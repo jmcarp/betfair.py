@@ -414,7 +414,6 @@ class Betfair(object):
         :param str market_id: The market id these orders are to be placed on
         :param list instructions: List of `UpdateInstruction` objects
         :param str customer_ref: Optional order identifier string
-
         """
         return self.make_api_request(
             'updateOrders',
