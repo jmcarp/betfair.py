@@ -37,3 +37,12 @@ class ApiError(BetfairError):
             self.message = 'UNKNOWN'
             self.details = None
         super(ApiError, self).__init__(self.message)
+
+
+class ApiHttpError(BetfairError):
+
+    def __init__(self, response):
+        self.response = response
+        self.status_code = response.status_code
+        self.message = "error http return code: %s" % self.status_code
+        super(ApiHttpError, self).__init__(self.message)
