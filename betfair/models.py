@@ -42,6 +42,7 @@ class MarketDescription(BetfairModel):
     rules = StringType()
     rules_has_date = BooleanType()
     clarifications = StringType()
+    each_way_divisor = FloatType()
 
 
 class RunnerCatalog(BetfairModel):
