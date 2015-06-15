@@ -42,14 +42,15 @@ def test_enum_type(input, expected):
     assert serialized['enumField'] == expected
 
 
+class Child(BetfairModel):
+    child_name = StringType()
+
+class Parent(BetfairModel):
+    parent_name = StringType()
+    child = ModelType(Child)
+
+
 def test_nested_model():
-    class Child(BetfairModel):
-        child_name = StringType()
-
-    class Parent(BetfairModel):
-        parent_name = StringType()
-        child = ModelType(Child)
-
     parent = Parent(parent_name='mom', child=dict(child_name='kid'))
     expected = {
         'parentName': 'mom',
@@ -58,3 +59,7 @@ def test_nested_model():
         },
     }
     assert parent.serialize() == expected
+
+
+def test_nested_model_unserialize_rogue():
+    Parent(parent_name='dad', child=dict(child_name='kid', rogue='rogue'))
