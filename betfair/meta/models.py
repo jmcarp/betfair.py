@@ -13,6 +13,7 @@ class BetfairModel(models.Model):
 
     def import_data(self, data, **kwargs):
         data = utils.unserialize_dict(data)
+        kwargs['strict'] = False
         return super(BetfairModel, self).import_data(data, **kwargs)
 
     def serialize(self, *args, **kwargs):
