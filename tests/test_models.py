@@ -25,12 +25,14 @@ FakeEnum = Enum(
     'TestEnum', [
         'val1',
         'val2',
+        'SOME_VALUE'
     ]
 )
 
 @pytest.mark.parametrize(['input', 'expected'], [
     ('val1', 'val1'),
     (FakeEnum.val1, 'val1'),
+    (FakeEnum.SOME_VALUE, 'SOME_VALUE')
 ])
 def test_enum_type(input, expected):
     class FakeModel(BetfairModel):
