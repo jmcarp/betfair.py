@@ -3,11 +3,35 @@
 import pytest
 
 from enum import Enum
+from schematics.models import Model
 from schematics.types import StringType
+from schematics.types.compound import ModelType
+from six import with_metaclass
 
 from betfair.meta.types import EnumType
-from betfair.meta.types import ModelType
-from betfair.meta.models import BetfairModel
+from betfair.meta.models import AttributeCamelizingModelMeta, BetfairModel
+
+
+def test_attribute_camalizing_model_meta():
+    class FakeModel(with_metaclass(AttributeCamelizingModelMeta, Model)):
+        unchanged = StringType()
+        camelized_field = StringType()
+        serialized_name_override = StringType(serialized_name='abc')
+        deserialize_from_override = StringType(deserialize_from='def')
+        both_overriden = StringType(serialized_name='hij',
+                                    deserialize_from='klm')
+    assert FakeModel.unchanged.serialized_name == 'unchanged'
+    assert FakeModel.unchanged.deserialize_from == 'unchanged'
+    assert FakeModel.camelized_field.serialized_name == 'camelizedField'
+    assert FakeModel.camelized_field.deserialize_from == 'camelizedField'
+    assert FakeModel.serialized_name_override.serialized_name == 'abc'
+    assert FakeModel.serialized_name_override.deserialize_from \
+        == 'serializedNameOverride'
+    assert FakeModel.deserialize_from_override.serialized_name \
+        == 'deserializeFromOverride'
+    assert FakeModel.deserialize_from_override.deserialize_from == 'def'
+    assert FakeModel.both_overriden.serialized_name == 'hij'
+    assert FakeModel.both_overriden.deserialize_from == 'klm'
 
 
 def test_field_inflection():
@@ -49,14 +73,14 @@ class Child(BetfairModel):
 
 class Parent(BetfairModel):
     parent_name = StringType()
-    child = ModelType(Child)
+    first_child = ModelType(Child)
 
 
 def test_nested_model():
-    parent = Parent(parent_name='mom', child=dict(child_name='kid'))
+    parent = Parent(parent_name='mom', first_child=dict(child_name='kid'))
     expected = {
         'parentName': 'mom',
-        'child': {
+        'firstChild': {
             'childName': 'kid',
         },
     }

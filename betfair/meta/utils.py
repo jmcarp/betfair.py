@@ -17,6 +17,5 @@ def convert_dict(data, key_converter=None, value_converter=None):
     }
 
 
-unserialize_dict = functools.partial(convert_dict, key_converter=inflection.underscore)
 camelize = functools.partial(inflection.camelize, uppercase_first_letter=False)
 serialize_dict = functools.partial(convert_dict, key_converter=camelize)

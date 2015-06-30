@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from schematics import types
-from schematics.types import compound
 from schematics.exceptions import ConversionError
 from schematics.exceptions import ValidationError
-
-from . import utils
 
 
 class DateTimeType(types.DateTimeType):
@@ -15,12 +12,6 @@ class DateTimeType(types.DateTimeType):
         '%Y-%m-%dT%H:%M:%S.%fZ',
         '%Y-%m-%dT%H:%M:%S',
     )
-
-
-class ModelType(compound.ModelType):
-
-    def export_loop(self, *args, **kwargs):
-        return utils.serialize_dict(super(ModelType, self).export_loop(*args, **kwargs))
 
 
 class EnumType(types.BaseType):
