@@ -36,16 +36,17 @@ class Betfair(object):
     :param str content_type: Optional content type
     :param str locale: Optional location ("australia", "italy", etc.)
     :param Session session: Optional Requests session
+    :param int timeout: Optional timeout duration (seconds)
     """
     def __init__(self, app_key, cert_file, content_type='application/json', locale=None,
-                 session=None, request_timeout=None):
+                 session=None, timeout=None):
         self.app_key = app_key
         self.cert_file = cert_file
         self.content_type = content_type
         self.locale = locale
         self.session = session or requests.Session()
         self.session_token = None
-        self.request_timeout = request_timeout
+        self.timeout = timeout
 
     @property
     def identity_url(self):
@@ -68,7 +69,7 @@ class Betfair(object):
         response = self.session.post(
             os.path.join(self.identity_url, method),
             headers=self.headers,
-            timeout=self.request_timeout,
+            timeout=self.timeout,
         )
         utils.check_status_code(response)
         data = response.json()
@@ -81,7 +82,7 @@ class Betfair(object):
             self.api_url,
             data=json.dumps(payload, cls=utils.BetfairEncoder),
             headers=self.headers,
-            timeout=self.request_timeout,
+            timeout=self.timeout,
         )
         utils.check_status_code(response, codes=codes)
         result = utils.result_or_error(response)
@@ -107,7 +108,7 @@ class Betfair(object):
                 'X-Application': self.app_key,
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            timeout=self.request_timeout,
+            timeout=self.timeout,
         )
         utils.check_status_code(response, [httplib.OK])
         data = response.json()
