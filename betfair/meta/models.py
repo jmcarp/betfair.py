@@ -1,32 +1,25 @@
 # -*- coding: utf-8 -*-
 
-from schematics import types, models
-from six import add_metaclass
+import six
 import inflection
+from schematics import types
+from schematics import models
 
 
-class AttributeCamelizingModelMeta(models.ModelMeta):
-    """A meta class that sets serialied_name and deserialize_from on class
-    schemactic type attributes to the camalized name of the attribute (unless
-    serialied_name or deserialize_from has already been specified)"""
-
-    def __new__(meta, name, bases, dct):
-        for k in dct:
-            v = dct[k]
-            if isinstance(v, types.BaseType):
-                camelized_name = inflection.camelize(k,
-                    uppercase_first_letter=False)
-                if v.serialized_name is None:
-                    v.serialized_name = camelized_name
-                if v.deserialize_from is None:
-                    v.deserialize_from = camelized_name
-
-        return super(AttributeCamelizingModelMeta, meta).__new__(meta, name,
-                                                                 bases, dct)
+class BetfairModelMeta(models.ModelMeta):
+    """Set default `serialized_name` and `deserialize_from` of Schematics types
+    to camel-cased attribute names.
+    """
+    def __new__(meta, name, bases, attrs):
+        for name, attr in six.iteritems(attrs):
+            if isinstance(attr, types.BaseType):
+                camelized = inflection.camelize(name, uppercase_first_letter=False)
+                attr.serialized_name = attr.serialized_name or camelized
+                attr.deserialize_from = attr.deserialize_from or camelized
+        return super(BetfairModelMeta, meta).__new__(meta, name, bases, attrs)
 
 
-@add_metaclass(AttributeCamelizingModelMeta)
-class BetfairModel(models.Model):
+class BetfairModel(six.with_metaclass(BetfairModelMeta, models.Model)):
 
     def __init__(self, **data):
         super(BetfairModel, self).__init__()

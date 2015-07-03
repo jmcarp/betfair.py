@@ -9,29 +9,32 @@ from schematics.types.compound import ModelType
 from six import with_metaclass
 
 from betfair.meta.types import EnumType
-from betfair.meta.models import AttributeCamelizingModelMeta, BetfairModel
+from betfair.meta.models import BetfairModel
+from betfair.meta.models import BetfairModelMeta
 
 
-def test_attribute_camalizing_model_meta():
-    class FakeModel(with_metaclass(AttributeCamelizingModelMeta, Model)):
-        unchanged = StringType()
-        camelized_field = StringType()
-        serialized_name_override = StringType(serialized_name='abc')
-        deserialize_from_override = StringType(deserialize_from='def')
-        both_overriden = StringType(serialized_name='hij',
-                                    deserialize_from='klm')
-    assert FakeModel.unchanged.serialized_name == 'unchanged'
-    assert FakeModel.unchanged.deserialize_from == 'unchanged'
-    assert FakeModel.camelized_field.serialized_name == 'camelizedField'
-    assert FakeModel.camelized_field.deserialize_from == 'camelizedField'
-    assert FakeModel.serialized_name_override.serialized_name == 'abc'
-    assert FakeModel.serialized_name_override.deserialize_from \
-        == 'serializedNameOverride'
-    assert FakeModel.deserialize_from_override.serialized_name \
-        == 'deserializeFromOverride'
-    assert FakeModel.deserialize_from_override.deserialize_from == 'def'
-    assert FakeModel.both_overriden.serialized_name == 'hij'
-    assert FakeModel.both_overriden.deserialize_from == 'klm'
+class FakeModel(with_metaclass(BetfairModelMeta, Model)):
+    unchanged = StringType()
+    camelized_field = StringType()
+    serialize_override = StringType(serialized_name='abc')
+    deserialize_override = StringType(deserialize_from='def')
+    both_override = StringType(serialized_name='hij', deserialize_from='klm')
+
+
+@pytest.mark.parametrize(('attr', 'value'), [
+    (FakeModel.unchanged.serialized_name, 'unchanged'),
+    (FakeModel.unchanged.deserialize_from, 'unchanged'),
+    (FakeModel.camelized_field.serialized_name, 'camelizedField'),
+    (FakeModel.camelized_field.deserialize_from, 'camelizedField'),
+    (FakeModel.serialize_override.serialized_name, 'abc'),
+    (FakeModel.serialize_override.deserialize_from, 'serializeOverride'),
+    (FakeModel.deserialize_override.serialized_name, 'deserializeOverride'),
+    (FakeModel.deserialize_override.deserialize_from, 'def'),
+    (FakeModel.both_override.serialized_name, 'hij'),
+    (FakeModel.both_override.deserialize_from, 'klm'),
+])
+def test_model_meta(attr, value):
+    assert attr == value
 
 
 def test_field_inflection():
@@ -70,6 +73,7 @@ def test_enum_type(input, expected):
 
 class Child(BetfairModel):
     child_name = StringType()
+
 
 class Parent(BetfairModel):
     parent_name = StringType()
