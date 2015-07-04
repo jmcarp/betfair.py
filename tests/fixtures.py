@@ -32,6 +32,11 @@ login_failure = response_fixture_factory(
     {'loginStatus': 'INVALID_USERNAME_OR_PASSWORD'},
 )
 
+login_bad_code = response_fixture_factory(
+    os.path.join(betfair.IDENTITY_URLS[None], 'certlogin'),
+    status=422,
+)
+
 keepalive_success = response_fixture_factory(
     os.path.join(betfair.IDENTITY_URLS[None], 'keepAlive'),
     {'status': 'SUCCESS'},

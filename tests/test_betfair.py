@@ -13,7 +13,7 @@ from tests import utils
 
 from tests import fixtures
 from tests.fixtures import client, logged_in_client
-from tests.fixtures import login_success, login_failure
+from tests.fixtures import login_success, login_failure, login_bad_code
 from tests.fixtures import keepalive_success, keepalive_failure
 from tests.fixtures import logout_success, logout_failure
 
@@ -67,6 +67,14 @@ def test_login_error(client, login_failure):
         client.login('name', 'wrong')
     error = excinfo.value
     assert error.message == 'INVALID_USERNAME_OR_PASSWORD'
+
+
+def test_login_bad_code(client, login_bad_code):
+    with pytest.raises(exceptions.ApiError) as excinfo:
+        client.login('name', 'wrong')
+    error = excinfo.value
+    assert error.status_code == 422
+    assert error.message == 'UNKNOWN'
 
 
 def test_keepalive_success(logged_in_client, keepalive_success):

@@ -9,13 +9,14 @@ import json
 noop = lambda *args, **kwargs: None
 
 
-def response_fixture_factory(url, data):
+def response_fixture_factory(url, data=None, status=200):
     @pytest.yield_fixture
     def fixture():
         responses.add(
             responses.POST,
             url,
-            body=json.dumps(data),
+            status=status,
+            body=json.dumps(data or {}),
             content_type='application/json',
         )
         responses.start()
