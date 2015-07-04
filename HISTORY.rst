@@ -3,6 +3,13 @@
 History
 -------
 
+0.2.1
+++++++++++++++++++
+* Add accounts endpoints. Thanks joelpob.
+* Speed up field inflection. Thanks petedmarsh.
+* Add custom timeout. Thanks ms5.
+* Update fields. Thanks ms5.
+
 0.2.0
 ++++++++++++++++++
 * Replace homegrown models with Schematics.
