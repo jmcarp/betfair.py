@@ -106,7 +106,7 @@ def make_payload(base, method, params):
     """
     payload = {
         'jsonrpc': '2.0',
-        'method': '{base}/v1.0/{endpoint}'.format(**locals()),
+        'method': '{base}APING/v1.0/{endpoint}'.format(**locals()),
         'params': utils.serialize_dict(params),
         'id': 1,
     }

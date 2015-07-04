@@ -450,7 +450,7 @@ class Betfair(object):
         :param Wallet wallet: Name of the wallet in question
         """
         result = self.make_api_request(
-            'Accounts',
+            'Account',
             'getAccountFunds',
             utils.get_kwargs(locals()),
             model=models.AccountFundsResponse,
@@ -470,7 +470,7 @@ class Betfair(object):
         :param Wallet wallte: Which wallet to return statementItems for
         """
         result = self.make_api_request(
-            'Accounts',
+            'Account',
             'getAccountStatement',
             utils.get_kwargs(locals()),
             model=models.AccountStatementReport,
@@ -482,7 +482,7 @@ class Betfair(object):
         rate and Betfair point balance.
         """
         result = self.make_api_request(
-            'Accounts',
+            'Account',
             'getAccountDetails',
             utils.get_kwargs(locals()),
             model=models.AccountDetailsResponse,
@@ -495,7 +495,7 @@ class Betfair(object):
         :param str from_currency: The currency from which the rates are computed
         """
         result = self.make_api_request(
-            'Accounts',
+            'Account',
             'listCurrencyRates',
             utils.get_kwargs(locals()),
             model=models.CurrencyRate,
@@ -510,7 +510,7 @@ class Betfair(object):
         :param float amount: Amount to transfer
         """
         result = self.make_api_request(
-            'Accounts',
+            'Account',
             'transferFunds',
             utils.get_kwargs(locals()),
             model=models.TransferResponse,
