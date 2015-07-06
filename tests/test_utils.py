@@ -10,6 +10,7 @@ from schematics.exceptions import ValidationError
 from betfair import models
 from betfair import constants
 from betfair.utils import BetfairEncoder
+from betfair.utils import make_payload
 
 
 def test_encode_enum():
@@ -34,3 +35,10 @@ def test_encode_model_invalid():
     raw = {'model': models.MarketDescription()}
     with pytest.raises(ValidationError):
         json.dumps(raw, cls=BetfairEncoder)
+
+
+def test_make_payload():
+    result = make_payload('Sports', 'listMarketBook', {'some_param': 123})
+    assert result == {'jsonrpc': '2.0',
+                     'method': 'SportsAPING/v1.0/listMarketBook',
+                     'params': {'someParam': 123}, 'id': 1}
