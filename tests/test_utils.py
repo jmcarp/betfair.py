@@ -39,6 +39,9 @@ def test_encode_model_invalid():
 
 def test_make_payload():
     result = make_payload('Sports', 'listMarketBook', {'some_param': 123})
-    assert result == {'jsonrpc': '2.0',
-                     'method': 'SportsAPING/v1.0/listMarketBook',
-                     'params': {'someParam': 123}, 'id': 1}
+    assert result == {
+        'jsonrpc': '2.0',
+        'method': 'SportsAPING/v1.0/listMarketBook',
+        'params': {'someParam': 123},
+        'id': 1,
+    }
