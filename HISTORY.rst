@@ -3,6 +3,10 @@
 History
 -------
 
+0.2.2
+++++++++++++++++++
+* Fix URL construction. Thanks petedmarsh.
+
 0.2.1
 ++++++++++++++++++
 * Add accounts endpoints. Thanks joelpob.
