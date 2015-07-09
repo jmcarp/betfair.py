@@ -70,11 +70,11 @@ def test_login_error(client, login_failure):
 
 
 def test_login_bad_code(client, login_bad_code):
-    with pytest.raises(exceptions.ApiError) as excinfo:
+    with pytest.raises(exceptions.ApiHttpError) as excinfo:
         client.login('name', 'wrong')
     error = excinfo.value
     assert error.status_code == 422
-    assert error.message == 'UNKNOWN'
+    assert error.message == 'error http return code: 422'
 
 
 def test_keepalive_success(logged_in_client, keepalive_success):

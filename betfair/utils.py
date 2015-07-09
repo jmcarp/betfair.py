@@ -53,7 +53,7 @@ def check_status_code(response, codes=None):
         else lambda resp: resp.status_code in codes
     )
     if not checker(response):
-        raise exceptions.ApiError(response, response.json())
+        raise exceptions.ApiHttpError(response)
 
 
 def result_or_error(response):
