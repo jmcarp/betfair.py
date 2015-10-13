@@ -235,7 +235,7 @@ class Betfair(object):
         filter = filter or models.MarketFilter()
         return self.make_api_request(
             'Sports',
-            'listCountries',
+            'listVenues',
             utils.get_kwargs(locals()),
             model=models.VenueResult,
         )
