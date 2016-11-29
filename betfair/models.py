@@ -330,7 +330,6 @@ class ItemDescription(BetfairModel):
 
 
 class ClearedOrderSummary(BetfairModel):
-    bet_outcome = StringType()
     event_type_id = StringType()
     event_id = StringType()
     market_id = StringType()
@@ -351,6 +350,7 @@ class ClearedOrderSummary(BetfairModel):
     size_settled = FloatType()
     profit = FloatType()
     size_cancelled = FloatType()
+    bet_outcome = StringType()
 
 
 class ClearedOrderSummaryReport(BetfairModel):
