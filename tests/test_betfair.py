@@ -12,10 +12,6 @@ from betfair import exceptions
 from tests import utils
 
 from tests import fixtures
-from tests.fixtures import client, logged_in_client
-from tests.fixtures import login_success, login_failure, login_bad_code
-from tests.fixtures import keepalive_success, keepalive_failure
-from tests.fixtures import logout_success, logout_failure
 
 
 def test_client_init(client):

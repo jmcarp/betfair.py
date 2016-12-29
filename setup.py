@@ -14,7 +14,7 @@ INSTALL_REQUIRES = [
     'requests>=2.6.2',
     'decorator>=3.4.2',
     'inflection>=0.3.0',
-    'schematics>=1.0.4',
+    'schematics>=1.0.4,<2.0.0',
     'python-dateutil>=2.4.2',
 ]
 TEST_REQUIRES = [
