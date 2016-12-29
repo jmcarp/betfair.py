@@ -2,7 +2,6 @@
 
 from __future__ import absolute_import
 
-import six
 import json
 import datetime
 import collections
@@ -12,7 +11,6 @@ import decorator
 from six.moves import http_client as httplib
 
 from betfair import exceptions
-from betfair.meta import utils
 from betfair.meta.models import BetfairModel
 
 
@@ -26,17 +24,6 @@ def get_chunks(sequence, chunk_size):
         sequence[idx:idx + chunk_size]
         for idx in range(0, len(sequence), chunk_size)
     ]
-
-
-def get_kwargs(kwargs):
-    """Get all keys and values from dictionary where key is not `self`.
-
-    :param dict kwargs: Input parameters
-    """
-    return {
-        key: value for key, value in six.iteritems(kwargs)
-        if key != 'self'
-    }
 
 
 def check_status_code(response, codes=None):
@@ -107,7 +94,7 @@ def make_payload(base, method, params):
     payload = {
         'jsonrpc': '2.0',
         'method': '{base}APING/v1.0/{method}'.format(**locals()),
-        'params': utils.serialize_dict(params),
+        'params': params,
         'id': 1,
     }
     return payload

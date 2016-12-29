@@ -146,7 +146,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listEventTypes',
-            utils.get_kwargs(locals()),
+            {'filter': filter, 'locale': locale},
             model=models.EventTypeResult,
         )
 
@@ -161,7 +161,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listCompetitions',
-            utils.get_kwargs(locals()),
+            {'filter': filter, 'locale': locale},
             model=models.CompetitionResult,
         )
 
@@ -176,7 +176,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listTimeRanges',
-            utils.get_kwargs(locals()),
+            {'granularity': granularity, 'filter': filter},
             model=models.TimeRangeResult,
         )
 
@@ -191,7 +191,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listEvents',
-            utils.get_kwargs(locals()),
+            {'filter': filter, 'locale': locale},
             model=models.EventResult,
         )
 
@@ -206,7 +206,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listMarketTypes',
-            utils.get_kwargs(locals()),
+            {'filter': filter, 'locale': locale},
             model=models.MarketTypeResult,
         )
 
@@ -221,7 +221,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listCountries',
-            utils.get_kwargs(locals()),
+            {'filter': filter, 'locale': locale},
             model=models.CountryCodeResult,
         )
 
@@ -236,7 +236,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listCountries',
-            utils.get_kwargs(locals()),
+            {'filter': filter, 'locale': locale},
             model=models.VenueResult,
         )
 
@@ -256,7 +256,8 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listMarketCatalogue',
-            utils.get_kwargs(locals()),
+            {'filter': filter, 'maxResults': max_results,
+             'marketProjection': market_projection, 'locale': locale},
             model=models.MarketCatalogue,
         )
 
@@ -276,7 +277,9 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listMarketBook',
-            utils.get_kwargs(locals()),
+            {'marketIds': market_ids, 'priceProjection': price_projection,
+             'orderProjection': order_projection, 'matchProjection': match_projection,
+             'currencyCode': currency_code, 'locale': locale},
             model=models.MarketBook,
         )
 
@@ -296,7 +299,8 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listMarketProfitAndLoss',
-            utils.get_kwargs(locals()),
+            {'marketIds': market_ids, 'includeSettledBets': include_settled_bets,
+             'includeBspBets': include_bsp_bets, 'netOfCommission': net_of_commission},
             model=models.MarketProfitAndLoss,
         )
 
@@ -348,7 +352,9 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listCurrentOrders',
-            utils.get_kwargs(locals()),
+            {'betIds': bet_ids, 'marketIds': market_ids, 'orderProjection': order_projection,
+             'dateRage': date_range, 'orderBy': order_by, 'sortDir': sort_dir,
+             'fromRecord': from_record, 'recordCount': record_count},
             model=models.CurrentOrderSummaryReport,
         )
 
@@ -376,7 +382,11 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'listClearedOrders',
-            utils.get_kwargs(locals()),
+            {'betStatus': bet_status, 'eventTypeIds': event_type_ids, 'eventIds': event_ids,
+             'marketIds': market_ids, 'runnerIds': runner_ids, 'betIds': bet_ids,
+             'side': side, 'settledDateRange': settled_date_range, 'groupBy': group_by,
+             'includeItemDescription': include_item_description, 'locale': locale,
+             'fromRecord': from_record, 'recordCount': record_count},
             model=models.ClearedOrderSummaryReport,
         )
 
@@ -392,7 +402,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'placeOrders',
-            utils.get_kwargs(locals()),
+            {'marketId': market_id, 'instructions': instructions, 'customerRef': customer_ref},
             model=models.PlaceExecutionReport,
         )
 
@@ -408,7 +418,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'cancelOrders',
-            utils.get_kwargs(locals()),
+            {'marketId': market_id, 'instructions': instructions, 'customerRef': customer_ref},
             model=models.CancelInstructionReport,
         )
 
@@ -424,7 +434,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'replaceOrders',
-            utils.get_kwargs(locals()),
+            {'marketId': market_id, 'instructions': instructions, 'customerRef': customer_ref},
             model=models.ReplaceExecutionReport,
         )
 
@@ -439,7 +449,7 @@ class Betfair(object):
         return self.make_api_request(
             'Sports',
             'updateOrders',
-            utils.get_kwargs(locals()),
+            {'marketId': market_id, 'instructions': instructions, 'customerRef': customer_ref},
             model=models.UpdateExecutionReport,
         )
 
@@ -452,7 +462,7 @@ class Betfair(object):
         result = self.make_api_request(
             'Account',
             'getAccountFunds',
-            utils.get_kwargs(locals()),
+            {'wallet': wallet},
             model=models.AccountFundsResponse,
         )
 
@@ -472,7 +482,8 @@ class Betfair(object):
         result = self.make_api_request(
             'Account',
             'getAccountStatement',
-            utils.get_kwargs(locals()),
+            {'locale': locale, 'fromRecord': from_record, 'recordCount': record_count,
+             'itemDateRange': item_date_range, 'includeItem': include_item, 'wallet': wallet},
             model=models.AccountStatementReport,
         )
 
@@ -484,7 +495,7 @@ class Betfair(object):
         result = self.make_api_request(
             'Account',
             'getAccountDetails',
-            utils.get_kwargs(locals()),
+            {},
             model=models.AccountDetailsResponse,
         )
 
@@ -497,7 +508,7 @@ class Betfair(object):
         result = self.make_api_request(
             'Account',
             'listCurrencyRates',
-            utils.get_kwargs(locals()),
+            {'fromCurrency': from_currency},
             model=models.CurrencyRate,
         )
 
@@ -512,6 +523,6 @@ class Betfair(object):
         result = self.make_api_request(
             'Account',
             'transferFunds',
-            utils.get_kwargs(locals()),
+            {'from': from_, 'to': to, 'amount': amount},
             model=models.TransferResponse,
         )
