@@ -350,6 +350,7 @@ class ClearedOrderSummary(BetfairModel):
     size_settled = FloatType()
     profit = FloatType()
     size_cancelled = FloatType()
+    bet_outcome = StringType()
 
 
 class ClearedOrderSummaryReport(BetfairModel):
