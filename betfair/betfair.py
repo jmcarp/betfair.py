@@ -409,7 +409,7 @@ class Betfair(object):
             'Sports',
             'cancelOrders',
             utils.get_kwargs(locals()),
-            model=models.CancelInstructionReport,
+            model=models.CancelExecutionReport,
         )
 
     @utils.requires_login
