@@ -80,7 +80,7 @@ def process_result(result, model=None):
     if model is None:
         return result
     if isinstance(result, collections.Sequence):
-        return [model(**item) for item in result]
+        return (model(**item) for item in result)
     return model(**result)
 
 
