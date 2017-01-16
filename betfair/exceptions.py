@@ -27,16 +27,31 @@ class AuthError(BetfairError):
         super(AuthError, self).__init__(self.message)
 
 
-class ApiError(BetfairError):
+class ApiBaseError(BetfairError):
 
-    def __init__(self, response, data):
+    def __init__(self, response, message, details):
         self.response = response
         self.status_code = response.status_code
+        self.message = message
+        self.details = details
+        super(ApiBaseError, self).__init__(self.message)
+
+
+class ApiError(ApiBaseError):
+
+    def __init__(self, response, data):
         try:
             error_data = data['error']['data']['APINGException']
-            self.message = error_data.get('errorCode', 'UNKNOWN')
-            self.details = error_data.get('errorDetails')
+            message = error_data.get('errorCode', 'UNKNOWN')
+            details = error_data.get('errorDetails')
         except KeyError:
-            self.message = 'UNKNOWN'
-            self.details = None
-        super(ApiError, self).__init__(self.message)
+            message = 'UNKNOWN'
+            details = None
+        super(ApiError, self).__init__(response, message, details)
+
+
+class ApiHttpError(ApiBaseError):
+
+    def __init__(self, response):
+        super(ApiHttpError, self).__init__(response, "error http return code: %s" %
+                                           response.status_code, None)
