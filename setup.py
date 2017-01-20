@@ -16,6 +16,7 @@ INSTALL_REQUIRES = [
     'inflection>=0.3.0',
     'schematics>=1.0.4,<2.0.0',
     'python-dateutil>=2.4.2',
+    'simplejson==3.6.5',
 ]
 TEST_REQUIRES = [
     'pytest',
