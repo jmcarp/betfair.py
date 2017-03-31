@@ -14,7 +14,7 @@ from six.moves import urllib_parse as urllib
 from betfair import utils
 from betfair import models
 from betfair import exceptions
-
+from betfair.models import ScoreEvent, Score, Incident, Incidents
 
 IDENTITY_URLS = collections.defaultdict(
     lambda: 'https://identitysso.betfair.com/api/',
@@ -25,6 +25,16 @@ API_URLS = collections.defaultdict(
     lambda: 'https://api.betfair.com/exchange/betting/json-rpc/v1',
     australia='https://api-au.betfair.com/exchange/betting/json-rpc/v1',
 )
+
+SCORE_URLS = collections.defaultdict(
+    lambda: 'https://api.betfair.com/exchange/scores/json-rpc/v1'
+)
+
+urls = {
+    'Betting': 'https://api.betfair.com/exchange/betting/json-rpc/v1',
+    'Accounts': 'https://api.betfair.com/exchange/account/json-rpc/v1',
+    'Score': 'https://api.betfair.com/exchange/scores/json-rpc/v1'
+}
 
 
 class Betfair(object):
@@ -38,6 +48,7 @@ class Betfair(object):
     :param Session session: Optional Requests session
     :param int timeout: Optional timeout duration (seconds)
     """
+
     def __init__(self, app_key, cert_file, content_type='application/json', locale=None,
                  session=None, timeout=None):
         self.app_key = app_key
@@ -55,6 +66,10 @@ class Betfair(object):
     @property
     def api_url(self):
         return API_URLS[self.locale]
+
+    @property
+    def score_url(self):
+        return SCORE_URLS[self.locale]
 
     @property
     def headers(self):
@@ -76,10 +91,13 @@ class Betfair(object):
         if data.get('status') != 'SUCCESS':
             raise exceptions.AuthError(response, data)
 
-    def make_api_request(self, base, method, params, codes=None, model=None):
+    def make_api_request(self, base, method, params, codes=None, model=None, api='Betting'):
         payload = utils.make_payload(base, method, params)
+        url = urls.get(api)
+        if not url:
+            raise exceptions.ApiError("no such API", method)
         response = self.session.post(
-            self.api_url,
+            url,
             data=json.dumps(payload, cls=utils.BetfairEncoder),
             headers=self.headers,
             timeout=self.timeout,
@@ -235,7 +253,7 @@ class Betfair(object):
         filter = filter or models.MarketFilter()
         return self.make_api_request(
             'Sports',
-            'listVenues',
+            'listCountries',
             utils.get_kwargs(locals()),
             model=models.VenueResult,
         )
@@ -409,7 +427,7 @@ class Betfair(object):
             'Sports',
             'cancelOrders',
             utils.get_kwargs(locals()),
-            model=models.CancelExecutionReport,
+            model=models.CancelInstructionReport,
         )
 
     @utils.requires_login
@@ -449,12 +467,14 @@ class Betfair(object):
 
         :param Wallet wallet: Name of the wallet in question
         """
-        return self.make_api_request(
+        result = self.make_api_request(
             'Account',
             'getAccountFunds',
             utils.get_kwargs(locals()),
             model=models.AccountFundsResponse,
+            api='Accounts'
         )
+        return result
 
     @utils.requires_login
     def get_account_statement(
@@ -469,7 +489,7 @@ class Betfair(object):
         :param IncludeItem include_item: Which items to include
         :param Wallet wallte: Which wallet to return statementItems for
         """
-        return self.make_api_request(
+        result = self.make_api_request(
             'Account',
             'getAccountStatement',
             utils.get_kwargs(locals()),
@@ -481,12 +501,14 @@ class Betfair(object):
         """Returns the details relating your account, including your discount
         rate and Betfair point balance.
         """
-        return self.make_api_request(
+        result = self.make_api_request(
             'Account',
             'getAccountDetails',
             utils.get_kwargs(locals()),
             model=models.AccountDetailsResponse,
+            api='Accounts'
         )
+        return result
 
     @utils.requires_login
     def list_currency_rates(self, from_currency=None):
@@ -494,7 +516,7 @@ class Betfair(object):
 
         :param str from_currency: The currency from which the rates are computed
         """
-        return self.make_api_request(
+        result = self.make_api_request(
             'Account',
             'listCurrencyRates',
             utils.get_kwargs(locals()),
@@ -509,9 +531,57 @@ class Betfair(object):
         :param Wallet to: Destination wallet
         :param float amount: Amount to transfer
         """
-        return self.make_api_request(
+        result = self.make_api_request(
             'Account',
             'transferFunds',
             utils.get_kwargs(locals()),
             model=models.TransferResponse,
+        )
+
+    @utils.requires_login
+    def list_scores(self, update_keys):
+        """List scores of keys in update keys from scores API
+
+        :param List update_keys: Keys to update
+        """
+        update_keys = [{'eventId': k} for k in update_keys]
+        del k # Stop k from propagiting as part of locals()
+        return self.make_api_request(
+            'Scores',
+            'listScores',
+            utils.get_kwargs(locals()),
+            api='Score',
+            model=Score
+        )
+
+    @utils.requires_login
+    def list_available_events(self, event_ids=None, event_type_ids=None, event_status=None):
+        """List events that one can query with the scores API
+
+        :param event_ids:
+        :param event_type_ids:
+        :param event_status:
+        """
+        return self.make_api_request(
+            'Scores',
+            'listAvailableEvents',
+            utils.get_kwargs(locals()),
+            api='Score',
+            model=ScoreEvent
+        )
+
+    @utils.requires_login
+    def list_incidents(self, update_keys):
+        """List incidents for the keys in update_keys
+
+        :param List update_keys: list of keys to get incidents for
+        """
+        update_keys = [{'eventId': k} for k in update_keys]
+        del k # Stop k from propagiting as part of locals()
+        return self.make_api_request(
+            'Scores',
+            'listIncidents',
+            utils.get_kwargs(locals()),
+            api='Score',
+            model=Incidents
         )
