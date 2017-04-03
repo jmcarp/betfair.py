@@ -544,8 +544,8 @@ class Betfair(object):
 
         :param List update_keys: Keys to update
         """
-        k = None
         update_keys = [{'eventId': k} for k in update_keys]
+        k = None
         del k  # Stop k from propagiting as part of locals()
         return self.make_api_request(
             'Scores',
@@ -577,8 +577,8 @@ class Betfair(object):
 
         :param List update_keys: list of keys to get incidents for
         """
-        k = None
         update_keys = [{'eventId': k} for k in update_keys]
+        k = None
         del k  # Stop k from propagiting as part of locals()
         return self.make_api_request(
             'Scores',
