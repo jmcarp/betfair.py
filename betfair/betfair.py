@@ -14,7 +14,7 @@ from six.moves import urllib_parse as urllib
 from betfair import utils
 from betfair import models
 from betfair import exceptions
-from betfair.models import ScoreEvent, Score, Incident, Incidents
+from betfair.models import ScoreEvent, Score, Incidents
 
 IDENTITY_URLS = collections.defaultdict(
     lambda: 'https://identitysso.betfair.com/api/',
@@ -545,7 +545,7 @@ class Betfair(object):
         :param List update_keys: Keys to update
         """
         update_keys = [{'eventId': k} for k in update_keys]
-        del k # Stop k from propagiting as part of locals()
+        del k  # Stop k from propagiting as part of locals()
         return self.make_api_request(
             'Scores',
             'listScores',
@@ -577,7 +577,7 @@ class Betfair(object):
         :param List update_keys: list of keys to get incidents for
         """
         update_keys = [{'eventId': k} for k in update_keys]
-        del k # Stop k from propagiting as part of locals()
+        del k  # Stop k from propagiting as part of locals()
         return self.make_api_request(
             'Scores',
             'listIncidents',
