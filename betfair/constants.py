@@ -62,6 +62,7 @@ RunnerStatus = Enum(
         'REMOVED_VACANT',
         'REMOVED',
         'HIDDEN',
+        'PLACED',
     ]
 )
 
