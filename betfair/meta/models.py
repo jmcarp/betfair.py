@@ -21,7 +21,7 @@ class BetfairModelMeta(models.ModelMeta):
 
 class BetfairModel(six.with_metaclass(BetfairModelMeta, models.Model)):
 
-    def __init__(self, **data):
+    def __init__(self, *args, **data):
         super(BetfairModel, self).__init__()
         self.import_data(data)
 
