@@ -210,6 +210,8 @@ class LimitOrder(BetfairModel):
     size = FloatType(required=True)
     price = FloatType(required=True)
     persistence_type = EnumType(constants.PersistenceType, required=True)
+    time_in_force = EnumType(constants.TimeInForce)
+    min_fill_size = FloatType()
 
 
 class LimitOnCloseOrder(BetfairModel):
@@ -224,7 +226,6 @@ class MarketOnCloseOrder(BetfairModel):
 # Results
 
 class CompetitionResult(BetfairModel):
-
     competition = ModelType(Competition)
     market_count = IntType()
     competition_region = StringType()
@@ -236,13 +237,11 @@ class CountryCodeResult(BetfairModel):
 
 
 class EventResult(BetfairModel):
-
     event = ModelType(Event)
     market_count = IntType()
 
 
 class EventTypeResult(BetfairModel):
-
     event_type = ModelType(EventType)
     market_count = IntType()
 
@@ -253,7 +252,6 @@ class MarketTypeResult(BetfairModel):
 
 
 class TimeRangeResult(BetfairModel):
-
     time_range = ModelType(TimeRange)
     market_count = IntType()
 
@@ -350,7 +348,6 @@ class ClearedOrderSummary(BetfairModel):
     size_settled = FloatType()
     profit = FloatType()
     size_cancelled = FloatType()
-    bet_outcome = StringType()
 
 
 class ClearedOrderSummaryReport(BetfairModel):
@@ -480,3 +477,45 @@ class CurrencyRate(BetfairModel):
 
 class TransferResponse(BetfairModel):
     transaction_id = StringType()
+
+
+# Score
+
+class ScoreEvent(BetfairModel):
+    event_id = IntType()
+    event_status = StringType()
+    event_type_id = IntType()
+
+
+class ScoreContext(BetfairModel):
+    event_time = StringType()
+    last_updated = DateTimeType()
+    update_sequence = IntType()
+    update_type = StringType()
+
+
+class Score(BetfairModel):
+    event_id = IntType()
+    event_type_id = IntType()
+    update_context = ModelType(ScoreContext)
+    values = DictType(StringType)
+    event_status = EnumType(constants.EventStatus, required=True)
+
+
+class UpdateContext(BetfairModel):
+    event_type = StringType()
+    last_updated = DateTimeType()
+    update_sequence = IntType()
+    update_type = StringType()
+
+
+class Incident(BetfairModel):
+    update_context = ModelType(UpdateContext)
+    values = DictType(StringType)
+
+
+class Incidents(BetfairModel):
+    event_id = IntType()
+    event_type_id = IntType()
+    event_status = EnumType(constants.EventStatus, required=True)
+    incidents = ListType(ModelType(Incident))

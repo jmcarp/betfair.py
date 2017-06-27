@@ -6,7 +6,6 @@ https://api.developer.betfair.com/services/webapps/docs/display/1smk3cen4v3lu3yo
 
 from enum import Enum
 
-
 MarketProjection = Enum(
     'MarketProjection', [
         'COMPETITION',
@@ -174,6 +173,12 @@ PersistenceType = Enum(
     ]
 )
 
+TimeInForce = Enum(
+    'TimeInForce', [
+        'FILL_OR_KILL'
+    ]
+)
+
 InstructionReportStatus = Enum(
     'InstructionReportStatus', [
         'SUCCESS',
@@ -268,5 +273,18 @@ IncludeItem = Enum(
 ItemClass = Enum(
     'ItemClass', [
         'UNKNOWN',
+    ]
+)
+
+EventStatus = Enum(
+    'EventStatus', [
+        'IN_PROGRESS',
+        'PENDING',
+        'NO_NEW_UPDATES',
+        'NO_LIVE_DATA_AVAILABLE',
+        'SERVICE_UNAVAILABLE',
+        'UNEXPECTED_ERROR',
+        'LIVE_DATA_TEMPORARILY_UNAVAILABLE',
+        'FINISHED'
     ]
 )
