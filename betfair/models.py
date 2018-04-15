@@ -126,7 +126,7 @@ class Order(BetfairModel):
     side = EnumType(constants.Side, required=True)
     price = FloatType(required=True)
     size = FloatType(required=True)
-    bsp_liability = BooleanType(required=True)
+    bsp_liability = FloatType(required=True)
     placed_date = DateTimeType(required=True)
     avg_price_matched = FloatType()
     size_matched = FloatType()
