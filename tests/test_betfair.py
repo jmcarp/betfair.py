@@ -23,9 +23,9 @@ def test_client_init(client):
 
 
 @pytest.mark.parametrize(['locale', 'identity_url'], [
-    (None, 'https://identitysso.betfair.com/api/'),
-    ('australia', 'https://identitysso.betfair.com/api/'),
-    ('italy', 'https://identitysso.betfair.it/api/'),
+    (None, 'https://identitysso-cert.betfair.com/api/'),
+    ('australia', 'https://identitysso-cert.betfair.com/api/'),
+    ('italy', 'https://identitysso-cert.betfair.it/api/'),
 ])
 def test_identity_url(locale, identity_url):
     client_ = betfair.Betfair('', '', locale=locale)
