@@ -224,7 +224,6 @@ class MarketOnCloseOrder(BetfairModel):
 # Results
 
 class CompetitionResult(BetfairModel):
-
     competition = ModelType(Competition)
     market_count = IntType()
     competition_region = StringType()
@@ -236,13 +235,11 @@ class CountryCodeResult(BetfairModel):
 
 
 class EventResult(BetfairModel):
-
     event = ModelType(Event)
     market_count = IntType()
 
 
 class EventTypeResult(BetfairModel):
-
     event_type = ModelType(EventType)
     market_count = IntType()
 
@@ -253,7 +250,6 @@ class MarketTypeResult(BetfairModel):
 
 
 class TimeRangeResult(BetfairModel):
-
     time_range = ModelType(TimeRange)
     market_count = IntType()
 

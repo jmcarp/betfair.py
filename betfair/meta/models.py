@@ -10,6 +10,7 @@ class BetfairModelMeta(models.ModelMeta):
     """Set default `serialized_name` and `deserialize_from` of Schematics types
     to camel-cased attribute names.
     """
+
     def __new__(meta, name, bases, attrs):
         for name, attr in six.iteritems(attrs):
             if isinstance(attr, types.BaseType):

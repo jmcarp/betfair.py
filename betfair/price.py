@@ -4,7 +4,6 @@ from __future__ import division
 
 from decimal import Decimal, ROUND_HALF_UP
 
-
 CUTOFFS = (
     (2, 100),
     (3, 50),
@@ -17,7 +16,6 @@ CUTOFFS = (
     (100, 0.2),
     (1000, 0.1),
 )
-
 
 MIN_PRICE = 1.01
 MAX_PRICE = 1000
@@ -63,6 +61,7 @@ def nearest_price(price, cutoffs=CUTOFFS):
         return MAX_PRICE
 
     price = as_dec(price)
+    step = None
     for cutoff, step in cutoffs:
         if price < cutoff:
             break

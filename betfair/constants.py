@@ -6,7 +6,6 @@ https://api.developer.betfair.com/services/webapps/docs/display/1smk3cen4v3lu3yo
 
 from enum import Enum
 
-
 MarketProjection = Enum(
     'MarketProjection', [
         'COMPETITION',
