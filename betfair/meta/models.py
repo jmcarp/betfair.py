@@ -20,9 +20,9 @@ class BetfairModelMeta(models.ModelMeta):
         return super(BetfairModelMeta, meta).__new__(meta, name, bases, attrs)
 
 
-class BetfairModel(six.with_metaclass(BetfairModelMeta, models.Model)):
+class BetfairModel(models.Model, metaclass=BetfairModelMeta):
 
-    def __init__(self, **data):
+    def __init__(self, context=None, **data):
         super(BetfairModel, self).__init__()
         self.import_data(data)
 
