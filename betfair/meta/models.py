@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import six
 import inflection
-from schematics import types
+import six
 from schematics import models
+from schematics import types
 
 
 class BetfairModelMeta(models.ModelMeta):

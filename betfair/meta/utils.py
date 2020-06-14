@@ -2,8 +2,8 @@
 
 import functools
 
-import six
 import inflection
+import six
 
 
 def convert_value(value, converter=None):

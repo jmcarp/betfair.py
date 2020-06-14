@@ -1,19 +1,17 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import absolute_import
-
-import os
-import json
-import itertools
 import collections
+import itertools
+import json
+import os
 
 import requests
 from six.moves import http_client as httplib
 from six.moves import urllib_parse as urllib
 
-from betfair import utils
-from betfair import models
 from betfair import exceptions
+from betfair import models
+from betfair import utils
 
 IDENTITY_URLS = collections.defaultdict(
     lambda: 'https://identitysso-cert.betfair.com/api/',

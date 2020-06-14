@@ -1,21 +1,18 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import absolute_import
-
+from schematics.types import BooleanType
+from schematics.types import FloatType
 from schematics.types import IntType
 from schematics.types import LongType
-from schematics.types import FloatType
 from schematics.types import StringType
-from schematics.types import BooleanType
 from schematics.types.compound import DictType
 from schematics.types.compound import ListType
 from schematics.types.compound import ModelType
 
-from betfair.meta.types import EnumType
-from betfair.meta.types import DateTimeType
-from betfair.meta.models import BetfairModel
-
 from betfair import constants
+from betfair.meta.models import BetfairModel
+from betfair.meta.types import DateTimeType
+from betfair.meta.types import EnumType
 
 
 class Event(BetfairModel):
