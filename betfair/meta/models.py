@@ -22,9 +22,12 @@ class BetfairModelMeta(models.ModelMeta):
 
 class BetfairModel(models.Model, metaclass=BetfairModelMeta):
 
-    def __init__(self, context=None, **data):
+    def __init__(self, *args, **data):
         super(BetfairModel, self).__init__()
-        self.import_data(data)
+        if args:
+            self.import_data(args[0])
+        else:
+            self.import_data(data)
 
     def import_data(self, data, **kwargs):
         kwargs['strict'] = False
