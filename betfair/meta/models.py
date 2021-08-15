@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 
-import six
 import inflection
-from schematics import types
+import six
 from schematics import models
+from schematics import types
 
 
 class BetfairModelMeta(models.ModelMeta):
     """Set default `serialized_name` and `deserialize_from` of Schematics types
     to camel-cased attribute names.
     """
+
     def __new__(meta, name, bases, attrs):
         for name, attr in six.iteritems(attrs):
             if isinstance(attr, types.BaseType):
@@ -19,11 +20,14 @@ class BetfairModelMeta(models.ModelMeta):
         return super(BetfairModelMeta, meta).__new__(meta, name, bases, attrs)
 
 
-class BetfairModel(six.with_metaclass(BetfairModelMeta, models.Model)):
+class BetfairModel(models.Model, metaclass=BetfairModelMeta):
 
-    def __init__(self, **data):
+    def __init__(self, *args, **data):
         super(BetfairModel, self).__init__()
-        self.import_data(data)
+        if args:
+            self.import_data(args[0])
+        else:
+            self.import_data(data)
 
     def import_data(self, data, **kwargs):
         kwargs['strict'] = False

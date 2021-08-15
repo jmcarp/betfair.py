@@ -1,24 +1,21 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import absolute_import
-
-import os
-import json
-import itertools
 import collections
+import itertools
+import json
+import os
 
 import requests
 from six.moves import http_client as httplib
 from six.moves import urllib_parse as urllib
 
-from betfair import utils
-from betfair import models
 from betfair import exceptions
-
+from betfair import models
+from betfair import utils
 
 IDENTITY_URLS = collections.defaultdict(
-    lambda: 'https://identitysso.betfair.com/api/',
-    italy='https://identitysso.betfair.it/api/',
+    lambda: 'https://identitysso-cert.betfair.com/api/',
+    italy='https://identitysso-cert.betfair.it/api/',
 )
 
 API_URLS = collections.defaultdict(
@@ -38,6 +35,7 @@ class Betfair(object):
     :param Session session: Optional Requests session
     :param int timeout: Optional timeout duration (seconds)
     """
+
     def __init__(self, app_key, cert_file, content_type='application/json', locale=None,
                  session=None, timeout=None):
         self.app_key = app_key
@@ -467,7 +465,7 @@ class Betfair(object):
         :param int record_count: Specifies the maximum number of records to be returned
         :param TimeRange item_date_range: Return items with an itemDate within this date range
         :param IncludeItem include_item: Which items to include
-        :param Wallet wallte: Which wallet to return statementItems for
+        :param Wallet wallet: Which wallet to return statementItems for
         """
         return self.make_api_request(
             'Account',

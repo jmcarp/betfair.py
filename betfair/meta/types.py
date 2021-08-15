@@ -6,7 +6,6 @@ from schematics.exceptions import ValidationError
 
 
 class DateTimeType(types.DateTimeType):
-
     DEFAULT_FORMATS = (
         '%Y-%m-%dT%H:%M:%S.%f',
         '%Y-%m-%dT%H:%M:%S.%fZ',
@@ -15,7 +14,6 @@ class DateTimeType(types.DateTimeType):
 
 
 class EnumType(types.BaseType):
-
     MESSAGES = {'choices': u'Value must belong to enum {0}.'}
 
     def __init__(self, enum, *args, **kwargs):

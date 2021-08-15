@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import absolute_import
-
-import six
-import json
-import datetime
 import collections
-
+import datetime
 import enum
+import json
+
 import decorator
+import six
 from six.moves import http_client as httplib
 
 from betfair import exceptions
